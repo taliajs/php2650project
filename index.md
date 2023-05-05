@@ -1,5 +1,3 @@
----
-title: Welcome
----
-# Bayesian Neural Networks
+
+# Bayesian Deep Learning / Bayesian Neural Networks
 
