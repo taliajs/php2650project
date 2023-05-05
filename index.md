@@ -1,3 +1,3 @@
 
-# Bayesian Deep Learning / Bayesian Neural Networks
+# Bayesian Neural Networks
 
