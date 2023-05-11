@@ -22,6 +22,10 @@ The Bayesian paradigm is based on 2 simple ideas: 1) Probability is a measure of
 
 ## Bayesian Neural Networks (BNNs)
 
+
+$q_{\phi}$
+
+
 Bayesian inference allows us to learn a probability distribution over possible neural networks [1, which can not only reduce overfitting, but inform us on how much uncertainty the model has. 
 
 Bayesian neural networks are neural networks that are trained using a Bayesian approach [2], meaning that the neural network has a prior on its weights [3]. BNNs are a promising paradigm that allows the generalization of applying deep learning in areas where a system is not allowed to fail [2]. These networks are about modeling uncertainty in parameters [2]. By modeling uncertainty, BNNs provides better prediction accuracy under the same model, and provides better uncertainty estimation for a predictive distribution [3]. BNNs are useful in active learning (human or algorithm labels new points from an unlabeled dataset) and online learning (where a model is retrained as new data becomes available) [2]. 
@@ -59,7 +63,7 @@ The assumption of sample independence is sacrificed by using a Markov Chain to p
 
 The idea behind MCMC is to construct a Markov Chain (a sequence of random samples Si, which probabilistically depends only on the previous sample Si-1, such that Si are distributed following a desired distribution [4]. Most MCMC algorithms require an initial burn in time before the Markov chain converges to the desired distribution [1]. 
 
-The most relevant MCMC method for Bayesian neural networks is the Metropolis-Hastings algorithm. This algorithm uses the proposal distribution mentioned earlier to generate a set of samples that asymptotically are distributed according to *p(w|D)* [1]. The Markov Chain is used to generate candidate samples, and then stochastically accept these samples with probability a, expressed as the acceptance rate: 
+The most relevant MCMC method for Bayesian neural networks is the **Metropolis-Hastings** algorithm. This algorithm uses the proposal distribution mentioned earlier to generate a set of samples that asymptotically are distributed according to *p(w|D)* [1]. The Markov Chain is used to generate candidate samples, and then stochastically accept these samples with probability a, expressed as the acceptance rate: 
 
 <center> 
 

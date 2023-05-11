@@ -22,6 +22,8 @@ beliefs influence posterior probabilities, also known as Bayes theorem
 
 ## Bayesian Neural Networks (BNNs)
 
+*q*<sub>*ϕ*</sub>
+
 Bayesian inference allows us to learn a probability distribution over
 possible neural networks \[1, which can not only reduce overfitting, but
 inform us on how much uncertainty the model has.
@@ -66,7 +68,7 @@ distribution can be calculated as follows:
 
 <center>
 
-<img src = "img/bayes-posterior.png" width = "214" />
+<img src = "img/bayes-posterior.png" />
 
 </center>
 
@@ -76,7 +78,7 @@ any new input:
 
 <center>
 
-<img src = "img/predictive-distribution.png" width = "214" />
+<img src = "img/predictive-distribution.png" />
 
 </center>
 
@@ -110,7 +112,7 @@ distribution \[4\]. Most MCMC algorithms require an initial burn in time
 before the Markov chain converges to the desired distribution \[1\].
 
 The most relevant MCMC method for Bayesian neural networks is the
-Metropolis-Hastings algorithm. This algorithm uses the proposal
+**Metropolis-Hastings** algorithm. This algorithm uses the proposal
 distribution mentioned earlier to generate a set of samples that
 asymptotically are distributed according to *p(w\|D)* \[1\]. The Markov
 Chain is used to generate candidate samples, and then stochastically
@@ -119,7 +121,7 @@ rate:
 
 <center>
 
-<img src = "img/acceptance-rate.png" width = "214" />
+<img src = "img/acceptance-rate.png" />
 
 </center>
 
