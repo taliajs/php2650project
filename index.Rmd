@@ -18,16 +18,24 @@ Deep learning is a machine learning technique used for learning neural networks,
 
 ## Bayesian
 
-The Bayesian paradigm is based on 2 simple ideas: 1) Probability is a measure of belief in the occurrence of events, rather than the limit in the frequency of occurrence (when the number of samples goes to infinity), which is assumed in the frequentist paradigm. 2) Prior beliefs influence posterior probabilities, also known as Bayes theorem. [2]. 
+The Bayesian paradigm is based on 2 simple ideas: 1) Probability is a measure of belief in the occurrence of events, rather than the limit in the frequency of occurrence (when the number of samples goes to infinity), which is assumed in the frequentist paradigm. 2) Prior beliefs influence posterior probabilities, also known as Bayes theorem [2]. 
 
 ## Bayesian Neural Networks (BNNs)
 
-\mathbf{x}_{i,j} = \mathbf{y}
+Bayesian inference allows us to learn a probability distribution over possible neural networks [1, which can not only reduce overfitting, but inform us on how much uncertainty the model has. 
+
+Bayesian neural networks are neural networks that are trained using a Bayesian approach [2], meaning that the neural network has a prior on its weights [3]. BNNs are a promising paradigm that allows the generalization of applying deep learning in areas where a system is not allowed to fail [2]. These networks are about modeling uncertainty in parameters [2]. By modeling uncertainty, BNNs provides better prediction accuracy under the same model, and provides better uncertainty estimation for a predictive distribution [3]. BNNs are useful in active learning (human or algorithm labels new points from an unlabeled dataset) and online learning (where a model is retrained as new data becomes available) [2]. 
+
+Normally, a neural networks aims to use the training data 
+
 
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 
+<img src="https://render.githubusercontent.com/render/math?math=X_12,X_2,...,X_n">
 
+<img src="https://render.githubusercontent.com/render/math?math=w_{i,j}"
 
+co<sub>2</sub>
 
 ## References
 
