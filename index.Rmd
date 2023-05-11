@@ -11,14 +11,18 @@ knitr::opts_chunk$set(echo = TRUE)
 #setwd("C:/Users/tjses/OneDrive/Documents/Spring 2023/PHP 2650 - Big Data/Final Project/php2650project")
 ```
 
-# Applying Bayesian inference into Neural Networks
+# Applying Bayesian Inference into Neural Networks
 
 Deep learning is a machine learning technique used for learning neural networks, and for processing data in a more “human” way. Deep Learning Neural Networks are a powerful tool that can be used to approximate solutions to many functions, even if they are not closed form. However, a major problem with neural networks is overfitting, which is when the learning algorithm does such a good job of tuning the parameters on the training set that it performs badly on new data [1]. There are many methods that can be used to reduce overfitting (like early stopping or dropout), but the method we are focusing on is **applying Bayesian inference into the neural network**. 
 
 
 ## Bayesian
 
-The Bayesian paradigm is based on 2 simple ideas: 1) Probability 
+The Bayesian paradigm is based on 2 simple ideas: 1) Probability is a measure of belief in the occurrence of events, rather than the limit in the frequency of occurrence (when the number of samples goes to infinity), which is assumed in the frequentist paradigm. 2) Prior beliefs influence posterior probabilities, also known as Bayes theorem. [2]. 
+
+## Bayesian Neural Networks (BNNs)
+
+$D_{train}$
 
 
 
