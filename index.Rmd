@@ -29,13 +29,13 @@ Bayesian neural networks are neural networks that are trained using a Bayesian a
 Normally, a neural networks aims to use the training data 
 
 
+my\_stock\_ticker
+
+$3\sb{x}$
+
+
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 
-<img src="https://render.githubusercontent.com/render/math?math=X_12,X_2,...,X_n">
-
-<img src="https://render.githubusercontent.com/render/math?math=w_{i,j}"
-
-co<sub>2</sub>
 
 ## References
 

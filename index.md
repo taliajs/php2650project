@@ -40,14 +40,11 @@ new data becomes available) \[2\].
 
 Normally, a neural networks aims to use the training data
 
+my_stock_ticker
+
+$3\sb{x}$
+
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-
-<img src="https://render.githubusercontent.com/render/math?math=X_12,X_2,...,X_n">
-
-\<img
-src=“<https://render.githubusercontent.com/render/math?math=w_%7Bi,j>}”
-
-co<sub>2</sub>
 
 ## References
 
