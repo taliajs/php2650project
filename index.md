@@ -1,3 +1,0 @@
-# Bayesian Neural Networks
-
-## ABOUT
