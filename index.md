@@ -1,4 +1,4 @@
-# Applying Bayesian inference into Neural Networks
+# Applying Bayesian Inference into Neural Networks
 
 Deep learning is a machine learning technique used for learning neural
 networks, and for processing data in a more “human” way. Deep Learning
@@ -13,7 +13,16 @@ inference into the neural network**.
 
 ## Bayesian
 
-The Bayesian paradigm is based on 2 simple ideas: 1) Probability
+The Bayesian paradigm is based on 2 simple ideas: 1) Probability is a
+measure of belief in the occurrence of events, rather than the limit in
+the frequency of occurrence (when the number of samples goes to
+infinity), which is assumed in the frequentist paradigm. 2) Prior
+beliefs influence posterior probabilities, also known as Bayes theorem.
+\[2\].
+
+## Bayesian Neural Networks (BNNs)
+
+*D*<sub>*t**r**a**i**n*</sub>
 
 ## References
 
