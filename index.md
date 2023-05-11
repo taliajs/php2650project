@@ -141,6 +141,23 @@ under the proposed and most recent samples \[**INSERT EQUATION HERE**\]
 
 ## Approximate Inference/Variational Inference
 
+-   Variational inference generates a proposal distribution…
+
+Variational inference is a method for learning the approximation of a
+posterior that scales better than the MCMC algorithm \[2\]. Variational
+methods model the posterior *p(w\|D)* using a parametrized equation
+\[**INSERT EQUATION HERE**\] called the approximate posterior. Then, the
+parameter (PHI - *INSERT SYMBOL HERE*) is tuned so it better
+approximates the intractable distribution \[1\].
+
+The common measure of closeness used is the **Kullback-Liebler
+divergence** (KL-divergence), a similarity measure for two distributions
+which is used to commonly measure dissimilarity between two observations
+\[1\]. The closer the KL-divergence is to 0, the closer/more informed
+the distributions are \[1\].
+
+\[**INSERT KL-DIVERGENCE EQUATION**\]
+
 ## References
 
 1.  Yu, et al. Bayesian Neural Networks.
