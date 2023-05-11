@@ -22,11 +22,9 @@ beliefs influence posterior probabilities, also known as Bayes theorem
 
 ## Bayesian Neural Networks (BNNs)
 
-*q*<sub>*ϕ*</sub>
-
 Bayesian inference allows us to learn a probability distribution over
-possible neural networks \[1, which can not only reduce overfitting, but
-inform us on how much uncertainty the model has.
+possible neural networks \[1\], which can not only reduce overfitting,
+but inform us on how much uncertainty the model has.
 
 Bayesian neural networks are neural networks that are trained using a
 Bayesian approach \[2\], meaning that the neural network has a prior on
