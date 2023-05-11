@@ -30,18 +30,46 @@ Normally, a neural networks aims to use the training data D\_train to update the
 
 There are several ways to estimate this posterior distribution - using **exact inference**, approximating the posterior through **sampling methods/techniques**, or using **variational inference** to approximate the posterior distribution. Our project will explore these three methods, and how these methods can be implemented. 
 
-
-
-<img src="https://render.githubusercontent.com/render/math?math={\L = -\sum_{j}[T_{j}ln(O_{j})] + \frac{\lambda W_{ij}^{2}}{2} \rightarrow \text{one-hot} \rightarrow -ln(O_{c}) + \frac{\lambda W_{ij}^{2}}{2}}">
-
-
-
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-
-
 ## Exact Inference
+This method takes a traditional Bayesian approach to estimate the posterior, where the posterior is computed using Bayes Rule. First, we need to identify the prior distribution of the weights *p(w)* as well as the likelihood function for our training data *p(D|w)*. The prior represents our current belief on what possible values the weight parameters could be, while the likelihood function for the training data is required to estimate the probabilities for each observation of the training data to occur. Through the use of Bayes Rule, the posterior distribution can be calculated as follows: 
+
+<center> 
+
+<img src = "img/bayes-posterior.png" width = "214" />
+
+</center>
+
+After estimating the posterior, the predictive distribution [**INSERT EQUATION HERE**] can be calculated to estimate the output values given any new input: 
+
+<center> 
+
+<img src = "img/predictive-distribution.png" width = "214" />
+
+</center>
+
+
+This predictive distribution can be interpreted as an infinite ensemble of weights, where each possible network contributes to the overall prediction after being weighted by the posterior likelihood [1]. 
+
+Exact inference is very easy to express, but a downside is that it becomes computationally expensive the more parameters the neural network has. This is due to integration being required over all of the weight parameters, which for the most part can only be approximated numerically. Thus, exact inference is really only feasible for small neural networks.
 
 ## Sampling Methods
+A sampling method used to exactly sample the posterior is **Markov Chain Monte Carlo (MCMC)**. MCMC algorithms are considered the best tool for sampling from the exact posterior, and tend to be better for high dimensionality problems [1]. 
+
+The assumption of sample independence is sacrificed by using a Markov Chain to produce a sequence of dependent samples [3], with a proposal distribution over choices in the next sample in the sequence conditioned on the previous choice [**INSERT EQUATION HERE!!**] [1]. 
+
+The idea behind MCMC is to construct a Markov Chain (a sequence of random samples Si, which probabilistically depends only on the previous sample Si-1, such that Si are distributed following a desired distribution [4]. Most MCMC algorithms require an initial burn in time before the Markov chain converges to the desired distribution [1]. 
+
+The most relevant MCMC method for Bayesian neural networks is the Metropolis-Hastings algorithm. This algorithm uses the proposal distribution mentioned earlier to generate a set of samples that asymptotically are distributed according to *p(w|D)* [1]. The Markov Chain is used to generate candidate samples, and then stochastically accept these samples with probability a, expressed as the acceptance rate: 
+
+<center> 
+
+<img src = "img/acceptance-rate.png" width = "214" />
+
+</center>
+
+This accept rate is equivalent to the ratio of posterior probabilities under the proposed and most recent samples [**INSERT EQUATION HERE**] [1].
+
+
 
 ## Approximate Inference/Variational Inference
 
