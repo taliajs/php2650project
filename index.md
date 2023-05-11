@@ -38,13 +38,31 @@ useful in active learning (human or algorithm labels new points from an
 unlabeled dataset) and online learning (where a model is retrained as
 new data becomes available) \[2\].
 
-Normally, a neural networks aims to use the training data
+Normally, a neural networks aims to use the training data D_train to
+update the weight parameters
+<img scr=https://render.githubusercontent.com/render/math?math=w"> so as
+to maximize a loss function L. A neural network through the Bayesian
+approach aims to estimate the posterior distribution (**INSERT EQUATION
+HERE**), the distribution of the weight parameters given the training
+data the model is fitted with \[1\].
 
-my_stock_ticker
+There are several ways to estimate this posterior distribution - using
+**exact inference**, approximating the posterior through **sampling
+methods/techniques**, or using **variational inference** to approximate
+the posterior distribution. Our project will explore these three
+methods, and how these methods can be implemented.
 
-$3\sb{x}$
+<img src="https://render.githubusercontent.com/render/math?math={\L = -\sum_{j}[T_{j}ln(O_{j})] + \frac{\lambda W_{ij}^{2}}{2} \rightarrow \text{one-hot} \rightarrow -ln(O_{c}) + \frac{\lambda W_{ij}^{2}}{2}}">
+
+<https://render.githubusercontent.com/render/math?math=%7Bln(O_%7Bc%7D>)}
 
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+
+## Exact Inference
+
+## Sampling Methods
+
+## Approximate Inference/Variational Inference
 
 ## References
 
