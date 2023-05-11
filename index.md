@@ -22,7 +22,13 @@ beliefs influence posterior probabilities, also known as Bayes theorem.
 
 ## Bayesian Neural Networks (BNNs)
 
-*D*<sub>*t**r**a**i**n*</sub>
+This sentence uses `$` delimiters to show math inline:
+$\sqrt{3x-1}+(1+x)^2$
+
+$\math{d}\_{train}$
+
+**The Cauchy-Schwarz Inequality**
+$$\left( \sum\_{k=1}^n a_k b_k \right)^2 \leq \left( \sum\_{k=1}^n a_k^2 \right) \left( \sum\_{k=1}^n b_k^2 \right)$$
 
 ## References
 
