@@ -1,0 +1,18 @@
+---
+title: "Bayesian Neural Networks" 
+output: 
+  md_document:  
+    variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+setwd("C:/Users/tjses/OneDrive/Documents/Spring 2023/PHP 2650 - Big Data/Final Project")
+```
+
+# Applying Bayesian inference into Neural Networks
+
+## Bayesian
+
+The Bayesian paradigm is based on 2 simple ideas: 1) Probability 
