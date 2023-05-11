@@ -20,6 +20,19 @@ infinity), which is assumed in the frequentist paradigm. 2) Prior
 beliefs influence posterior probabilities, also known as Bayes theorem
 \[2\].
 
+A saying that is often used to describe Bayesian is “it’s foolish to
+believe something with 100% probability”. A well known example of this
+is swans. For the longest time, people used to think there were only
+white swans (that all swans were white). But, that statement was proven
+wrong when it was discovered that black swans exist.
+
+The idea of Bayesian inference is to take into account everything. This
+means to have probabilities, no matter how small, on all possibilities
+(all possible outcomes), so we can update our prior belief/knowledge
+when new information is obtained. In the context of a model, leaving
+everything with probability allows the model to take into account future
+information and update it, rather than making a new model.
+
 ## Bayesian Neural Networks (BNNs)
 
 Bayesian inference allows us to learn a probability distribution over
