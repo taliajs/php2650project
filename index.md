@@ -115,16 +115,14 @@ dimensionality problems \[1\].
 The assumption of sample independence is sacrificed by using a Markov
 Chain to produce a sequence of dependent samples \[3\], with a proposal
 distribution over choices in the next sample in the sequence conditioned
-on the previous choice \[**INSERT EQUATION HERE!!**\] \[1\]. This is
-some <sup>superscript</sup> text. This is some <sub>subscript</sub>
-text.
+on the previous choice \[**INSERT EQUATION HERE!!**\] \[1\].
 
 The idea behind MCMC is to construct a Markov Chain (a sequence of
-random samples S <sub>i</sub>) which probabilistically depends only on
-the previous sample Si-1 \[**get as s\_(i-1)**\], such that Si are
-distributed following a desired distribution \[2\]. Most MCMC algorithms
-require an initial burn in time before the Markov chain converges to the
-desired distribution \[1\].
+random samples S_i) which probabilistically depends only on the previous
+sample Si-1 \[**get as s\_(i-1)**\], such that Si are distributed
+following a desired distribution \[2\]. Most MCMC algorithms require an
+initial burn in time before the Markov chain converges to the desired
+distribution \[1\].
 
 The most relevant MCMC method for Bayesian neural networks is the
 **Metropolis-Hastings** algorithm. This algorithm uses the proposal
