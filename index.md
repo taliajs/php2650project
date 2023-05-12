@@ -172,11 +172,15 @@ be the loss function. Additionally, at every new epoch, new weights are
 sampled, and backpropagation and gradient descent is done on the
 parameters for each posterior distribution for each weight and node.
 
-**SOMETHING ABOUT EVIDENCE LOWER BOUND (ELBO??)**
-
 ### Bayes by Backpropagation
 
--   source 4
+Bayes by Backpropagation is a backpropagation algorithm that is used for
+learning a probability distribution on the weights of a neural network
+\[4\]. This algorithm implements stochastic variational inference and
+regularizes the weights by minimizing the loss function.
+
+**ELBO**? if different from KL-divergence, add this in before this
+section!!!
 
 ## Application
 
@@ -186,9 +190,10 @@ pytorch libraries).
 
 First, we will implement a Bayesian neural network using variational
 inference for a sine function: *1.5sin*
-<img src = "https://render.githubusercontent.com/render/math?math=x^{2}">.
-We fit a Bayesian neural network with 3 layers, with a prior of 0.1,
-using a feed-forward approach.
+<img src = "https://render.githubusercontent.com/render/math?math=x^{2}">
+\[**format the sin equation**\] with some randomness (+1 on average). We
+fit a Bayesian neural network with 3 layers, with a prior of 0.1, using
+a feed-forward approach.
 
     model = nn.Sequential(
     bnn.BayesLinear(prior_mu=0, prior_sigma=0.1, in_features=1, out_features=1000),
@@ -198,14 +203,16 @@ using a feed-forward approach.
     bnn.BayesLinear(prior_mu=0, prior_sigma=0.1, in_features=500, out_features=1),
     )
 
-***EXPLANATION!!!!***
-
 <figure>
 <img src = "img/sine-plot.png" width = "500" />
 <figcaption aria-hidden="true">
 <em>Figure 1…</em>
 </figcaption>
 </figure>
+
+***EXPLANATION!!!!***
+
+-   The predicted mean model is close to the target function.
 
 <u>Concrete Data </u>
 
@@ -324,6 +331,8 @@ concrete compressive strength in MPa (output variable)
 
 We will implement variational and sampling methods on this concrete
 linear regression dataset.
+
+**PREPROCESSING** - ***ADD!!***
 
 ### Variational Inference
 
