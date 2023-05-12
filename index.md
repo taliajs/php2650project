@@ -189,6 +189,7 @@ inference for a sine function:
 
 <figure>
 <img src = "img/sine-plot.png" width = "500" /> alt = “Plot showing…..”
+/\>
 <figure>
 
 <u>Concrete Data </u>
@@ -315,7 +316,7 @@ linear regression dataset.
 
 <figure>
 <img src = "img/variational-data.png" width = "500" /> alt = “Plot
-showing…..”
+showing…..” /\>
 <figure>
 
 ### MCMC Sampling
@@ -326,6 +327,7 @@ showing…..”
 
 <figure>
 <img src = "img/mcmc-data.png" width = "500" /> alt = “Plot showing…..”
+/\>
 <figure>
 
 ## References

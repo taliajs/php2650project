@@ -112,8 +112,10 @@ First, we will implement a Bayesian neural network using variational inference f
 
 <figure>
 <img src = "img/sine-plot.png" width = "500" />
-alt = "Plot showing....."
+alt = "Plot showing....." />
 <figure> 
+
+
 
 <u>Concrete Data </u>
 
@@ -178,11 +180,13 @@ We will implement variational and sampling methods on this concrete linear regre
 
 ### Variational Inference 
 
+
+
 ***EXPLANATION***
 
 <figure>
 <img src = "img/variational-data.png" width = "500" />
-alt = "Plot showing....."
+alt = "Plot showing....." />
 <figure> 
 
 ### MCMC Sampling 
@@ -194,8 +198,11 @@ alt = "Plot showing....."
 
 <figure>
 <img src = "img/mcmc-data.png" width = "500" />
-alt = "Plot showing....."
+alt = "Plot showing....." />
 <figure> 
+
+
+
 
 ## References
 
