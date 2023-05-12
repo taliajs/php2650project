@@ -51,16 +51,21 @@ useful in active learning (human or algorithm labels new points from an
 unlabeled dataset) and online learning (where a model is retrained as
 new data becomes available) \[2\].
 
-Normally, a neural networks aims to use the training data \[**INSERT
-D_train** as a mathematical formula with subscript\] to update the
-weight parameters
-<img src = "https://render.githubusercontent.com/render/math?math=w"> so
-as to maximize a loss function \[\].
+Normally, a neural networks aims to use the training data
+<img src="https://render.githubusercontent.com/render/math?math={[D_{train}ln(O_{j})}">
 
-*w* so as to maximize a loss function L. A neural network through the
-Bayesian approach aims to estimate the posterior distribution (**INSERT
-EQUATION HERE**), the distribution of the weight parameters given the
-training data the model is fitted with \[1\].
+\[**INSERT D_train** as a mathematical formula with subscript\]
+
+to update the weight parameters
+<img src = "https://render.githubusercontent.com/render/math?math=w"> so
+as to maximize a loss function \<img src =
+“<https://render.githubusercontent.com/render/math?math=%7BL(w)>}”. A
+neural network through the Bayesian approach aims to estimate the
+posterior distribution (**INSERT EQUATION HERE**), the distribution of
+the weight parameters given the training data the model is fitted with
+\[1\].
+
+<img src="https://render.githubusercontent.com/render/math?math={\L = -\sum_{j}[T_{j}ln(O_{j})] + \frac{\lambda W_{ij}^{2}}{2} \rightarrow \text{one-hot} \rightarrow -ln(O_{c}) + \frac{\lambda W_{ij}^{2}}{2}}">
 
 There are several ways to estimate this posterior distribution - using
 **exact inference**, approximating the posterior through **sampling
