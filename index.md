@@ -53,10 +53,14 @@ new data becomes available) \[2\].
 
 Normally, a neural networks aims to use the training data \[**INSERT
 D_train** as a mathematical formula with subscript\] to update the
-weight parameters *w* so as to maximize a loss function L. A neural
-network through the Bayesian approach aims to estimate the posterior
-distribution (**INSERT EQUATION HERE**), the distribution of the weight
-parameters given the training data the model is fitted with \[1\].
+weight parameters
+<https://render.githubusercontent.com/render/math?math=w> so as to
+maximize a loss function \[\].
+
+*w* so as to maximize a loss function L. A neural network through the
+Bayesian approach aims to estimate the posterior distribution (**INSERT
+EQUATION HERE**), the distribution of the weight parameters given the
+training data the model is fitted with \[1\].
 
 There are several ways to estimate this posterior distribution - using
 **exact inference**, approximating the posterior through **sampling
