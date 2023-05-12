@@ -175,19 +175,29 @@ parameters for each posterior distribution for each weight and node.
 
 ### Bayes by Backpropagation
 
+-   source 4
+
 ## Application
 
-We will demonstrate how sampling methods and variational inference can
-be implemented.
+We will implement variational inference using Kullback-Liebler/Bayes by
+Backprop and MCMC.
+
+First, we will implement a Bayesian neural network using variational
+inference for a sine function:
+
+***EXPLANATION!!!!***
+
+<figure>
+<img src = "img/sine-plot.png" width = "500" /> alt = “Plot showing…..”
+<figure>
 
 <u>Concrete Data </u>
 
-This dataset was found on UCI (or Kaggle??)
-
-This dataset contains information on 8 different components/features
-used to make concrete for 1,030 concrete samples, with the outcome of
-interest being concrete compressive strength. All the variables are
-quantitative.
+This dataset was found on Kaggle, an online platform that has publicly
+avilable datasets for use. This dataset contains information on 8
+different components/features used to make concrete for 1,030 concrete
+samples, with the outcome of interest being concrete compressive
+strength. All the variables are quantitative.
 
 Description of the Dataset (from Kaggle):
 
@@ -296,6 +306,28 @@ concrete compressive strength in MPa (output variable)
 </tbody>
 </table>
 
+We will implement variational and sampling methods on this concrete
+linear regression dataset.
+
+### Variational Inference
+
+***EXPLANATION***
+
+<figure>
+<img src = "img/variational-data.png" width = "500" /> alt = “Plot
+showing…..”
+<figure>
+
+### MCMC Sampling
+
+***EXPLANATION***
+
+***MENTION THE ALGORITHM USED***
+
+<figure>
+<img src = "img/mcmc-data.png" width = "500" /> alt = “Plot showing…..”
+<figure>
+
 ## References
 
 1.  Yu, et al. Bayesian Neural Networks.
@@ -307,3 +339,14 @@ concrete compressive strength in MPa (output variable)
 
 3.  Bayesian Deep Learning \[slides\]:
     <https://alinlab.kaist.ac.kr/resource/Lec8_Bayesian_DL.pdf>
+
+4.  Blundell, et al. Weight Uncertainty in Neural Networks.
+    <https://arxiv.org/abs/1505.05424>
+
+(MCMC algorithm that is used in our application) Chandra, et
+al. Bayesian Neural Networks via MCMC: a Python-based tutorial.
+<https://arxiv.org/pdf/2304.02595v1.pdf>
+
+Concrete Data Reference - I-Cheng Yeh, “Modeling of strength of high
+performance concrete using artificial neural networks,” Cement and
+Concrete Research, Vol. 28, No. 12, pp. 1797-1808 (1998).
