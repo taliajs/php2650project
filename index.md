@@ -141,8 +141,6 @@ under the proposed and most recent samples \[**INSERT EQUATION HERE**\]
 
 ## Approximate Inference/Variational Inference
 
--   Variational inference generates a proposal distribution…
-
 Variational inference is a method for learning the approximation of a
 posterior that scales better than the MCMC algorithm \[2\]. Variational
 methods model the posterior *p(w\|D)* using a parametrized equation
@@ -156,7 +154,25 @@ which is used to commonly measure dissimilarity between two observations
 \[1\]. The closer the KL-divergence is to 0, the closer/more informed
 the distributions are \[1\].
 
-\[**INSERT KL-DIVERGENCE EQUATION**\]
+<center>
+
+<img src = "img/acceptance-rate.png" width = "300"/>
+
+</center>
+
+Variational inference generates a proposal posterior and compares that
+posterior with the observed posterior (the actual posterior from the
+data). In the KL-divergence equation above, the denominator (which
+represents the observed posterior), stays constant, and the numerator
+represents the proposal posterior. At each epoch, you fit a new
+posterior and compare it to the observed posterior; this would be the
+loss function. New weights are sampled for every new epoch (backprop and
+gradient descent are done on the parameters for each posterior
+distribution for each weight/node).
+
+Variational inference are very similar to regular neural networks. There
+are still some issues with overfitting for variational inference, but
+it’s a lot less overfitting compared to typical neural networks.
 
 ## References
 
