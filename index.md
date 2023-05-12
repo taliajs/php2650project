@@ -180,10 +180,12 @@ parameters for each posterior distribution for each weight and node.
 ## Application
 
 We will implement variational inference using Kullback-Liebler/Bayes by
-Backprop and MCMC.
+Backprop and MCMC on bayesian neural networks using Python (keras and
+pytorch libraries).
 
 First, we will implement a Bayesian neural network using variational
 inference for a sine function:
+<img src= "https://render.githubusercontent.com/render/math?math=1.5x^{2}">
 
 ***EXPLANATION!!!!***
 
@@ -202,7 +204,7 @@ different components/features used to make concrete for 1,030 concrete
 samples, with the outcome of interest being concrete compressive
 strength. All the variables are quantitative.
 
-Description of the Dataset (from Kaggle):
+Description of the Dataset (from Kaggle) \[5\]:
 
 > Concrete is the most used material for construction in the world!
 > There are some components that should be combined to make the
@@ -320,6 +322,10 @@ linear regression dataset.
 
 ### MCMC Sampling
 
+For implementing MCMC, we used an algorithm from Chandra et al that used
+Langevin-based MCMC sampling on a Bayesian neural network framework
+\[6\].
+
 ***EXPLANATION***
 
 ***MENTION THE ALGORITHM USED***
@@ -341,10 +347,12 @@ linear regression dataset.
 4.  Blundell, et al. Weight Uncertainty in Neural Networks.
     <https://arxiv.org/abs/1505.05424>
 
-(MCMC algorithm that is used in our application) Chandra, et
-al. Bayesian Neural Networks via MCMC: a Python-based tutorial.
-<https://arxiv.org/pdf/2304.02595v1.pdf>
+5.  Concrete Dataset:
+    <https://www.kaggle.com/datasets/sinamhd9/concrete-comprehensive-strength>
 
-Concrete Data Reference - I-Cheng Yeh, “Modeling of strength of high
-performance concrete using artificial neural networks,” Cement and
-Concrete Research, Vol. 28, No. 12, pp. 1797-1808 (1998).
+6.  Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based
+    tutorial. <https://arxiv.org/pdf/2304.02595v1.pdf>
+
+-   Reference: I-Cheng Yeh, “Modeling of strength of high performance
+    concrete using artificial neural networks,” Cement and Concrete
+    Research, Vol. 28, No. 12, pp. 1797-1808 (1998).

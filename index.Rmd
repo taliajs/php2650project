@@ -104,9 +104,11 @@ In the equation above, the log represents the two distributions. The numerator r
 
 ## Application
 
-We will implement variational inference using Kullback-Liebler/Bayes by Backprop and MCMC.
+We will implement variational inference using Kullback-Liebler/Bayes by Backprop and MCMC on bayesian neural networks using Python (keras and pytorch libraries).
 
-First, we will implement a Bayesian neural network using variational inference for a sine function: 
+
+First, we will implement a Bayesian neural network using variational inference for a sine function: <img src= "https://render.githubusercontent.com/render/math?math=1.5x^{2}">
+
 
 ***EXPLANATION!!!!***
 
@@ -120,7 +122,7 @@ First, we will implement a Bayesian neural network using variational inference f
 
 This dataset was found on Kaggle, an online platform that has publicly avilable datasets for use. This dataset contains information on 8 different components/features used to make concrete for 1,030 concrete samples, with the outcome of interest being concrete compressive strength. All the variables are quantitative. 
 
-Description of the Dataset (from Kaggle): 
+Description of the Dataset (from Kaggle) [5]: 
 
 > Concrete is the most used material for construction in the world! There are some components that should be combined to make the concrete. These components can affect the compressive strength of the concrete. To obtain the real compressive strength of concrete (target labels in the dataset), an engineer needs to break the cylinder samples under the compression-testing machine. The failure load is divided by the cylinder's cross-section to obtain the compressive strength. Engineers use different kinds of concretes for different building purposes. For example, the strength of concrete used for residential buildings should not be lower than 2500 psi (17.2 MPa). Concrete is a material with high strength in compression, but low strength in tension. That is why engineers use reinforced concrete (usually with steel rebars) to build structures.
 
@@ -188,6 +190,8 @@ We will implement variational and sampling methods on this concrete linear regre
 
 ### MCMC Sampling 
 
+For implementing MCMC, we used an algorithm from Chandra et al that used Langevin-based MCMC sampling on a Bayesian neural network framework [6]. 
+
 
 ***EXPLANATION***
 
@@ -204,11 +208,11 @@ We will implement variational and sampling methods on this concrete linear regre
 
 3. Bayesian Deep Learning [slides]: https://alinlab.kaist.ac.kr/resource/Lec8_Bayesian_DL.pdf
 
-
 4. Blundell, et al. Weight Uncertainty in Neural Networks. https://arxiv.org/abs/1505.05424
 
-(MCMC algorithm that is used in our application)
-Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based tutorial. https://arxiv.org/pdf/2304.02595v1.pdf
+5. Concrete Dataset: https://www.kaggle.com/datasets/sinamhd9/concrete-comprehensive-strength
 
-Concrete Data Reference 
-- I-Cheng Yeh, "Modeling of strength of high performance concrete using artificial neural networks," Cement and Concrete Research, Vol. 28, No. 12, pp. 1797-1808 (1998).
+6. Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based tutorial. https://arxiv.org/pdf/2304.02595v1.pdf
+
+
+- Reference: I-Cheng Yeh, "Modeling of strength of high performance concrete using artificial neural networks," Cement and Concrete Research, Vol. 28, No. 12, pp. 1797-1808 (1998).
