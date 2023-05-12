@@ -48,7 +48,7 @@ After estimating the posterior, the predictive distribution [**INSERT EQUATION H
 
 <center> 
 
-<img src = "img/predictive-distribution.png" width = "400" />
+<img src = "img/predictive-distribution.png" width = "350" />
 
 </center>
 
@@ -68,7 +68,7 @@ The most relevant MCMC method for Bayesian neural networks is the **Metropolis-H
 
 <center> 
 
-<img src = "img/acceptance-rate.png" height = "150" />
+<img src = "img/acceptance-rate.png" width = "200" height = "150" />
 
 </center>
 
@@ -85,7 +85,7 @@ The common measure of closeness used is the **Kullback-Liebler divergence** (KL-
 
 <center> 
 
-<img src = "img/kl-divergence-formula2.png" />
+<img src = "img/kl-divergence-formula2.png" width = "200" />
 
 </center>
 
