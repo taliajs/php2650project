@@ -88,7 +88,7 @@ any new input:
 
 <center>
 
-<img src = "img/predictive-distribution.png" />
+<img src = "img/predictive-distribution.png" width = "250"/>
 
 </center>
 
@@ -131,7 +131,7 @@ rate:
 
 <center>
 
-<img src = "img/acceptance-rate.png" />
+<img src = "img/acceptance-rate.png" width = "350" />
 
 </center>
 
@@ -156,7 +156,7 @@ the distributions are \[1\].
 
 <center>
 
-<img src = "img/kl-divergence-formula.png" />
+<img src = "img/kl-divergence-formula2.png" />
 
 </center>
 
