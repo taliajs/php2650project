@@ -185,9 +185,10 @@ Backprop and MCMC on bayesian neural networks using Python (keras and
 pytorch libraries).
 
 First, we will implement a Bayesian neural network using variational
-inference for a sine function: *1.5sin(x^2)*. We fit a Bayesian neural
-network with 3 layers, with a prior of 0.1, using a feed-forward
-approach.
+inference for a sine function: *1.5sin*
+<img src = "https://render.githubusercontent.com/render/math?math=x^{2}">.
+We fit a Bayesian neural network with 3 layers, with a prior of 0.1,
+using a feed-forward approach.
 
     model = nn.Sequential(
     bnn.BayesLinear(prior_mu=0, prior_sigma=0.1, in_features=1, out_features=1000),
