@@ -78,7 +78,7 @@ distribution can be calculated as follows:
 
 <center>
 
-<img src = "img/bayes-posterior.png" width = "200"/>
+<img src = "img/bayes-posterior.png" width = "400"/>
 
 </center>
 
@@ -88,7 +88,7 @@ any new input:
 
 <center>
 
-<img src = "img/predictive-distribution.png" width = "200" />
+<img src = "img/predictive-distribution.png" width = "400" />
 
 </center>
 
@@ -118,7 +118,7 @@ on the previous choice \[**INSERT EQUATION HERE!!**\] \[1\].
 The idea behind MCMC is to construct a Markov Chain (a sequence of
 random samples Si, which probabilistically depends only on the previous
 sample Si-1, such that Si are distributed following a desired
-distribution \[4\]. Most MCMC algorithms require an initial burn in time
+distribution \[2\]. Most MCMC algorithms require an initial burn in time
 before the Markov chain converges to the desired distribution \[1\].
 
 The most relevant MCMC method for Bayesian neural networks is the
@@ -131,7 +131,7 @@ rate:
 
 <center>
 
-<img src = "img/acceptance-rate.png" height = "50%" />
+<img src = "img/acceptance-rate.png" height = "150" />
 
 </center>
 
@@ -173,6 +173,8 @@ distribution for each weight/node).
 Variational inference are very similar to regular neural networks. There
 are still some issues with overfitting for variational inference, but
 it’s a lot less overfitting compared to typical neural networks.
+
+### Bayes by Backpropagation
 
 ## References
 
