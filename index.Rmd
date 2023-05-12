@@ -85,7 +85,7 @@ The common measure of closeness used is the **Kullback-Liebler divergence** (KL-
 
 <center> 
 
-<img src = "img/acceptance-rate.png" width = "300"/>
+<img src = "img/kl-divergence-formula.png" />
 
 </center>
 

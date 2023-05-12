@@ -156,7 +156,7 @@ the distributions are \[1\].
 
 <center>
 
-<img src = "img/acceptance-rate.png" width = "300"/>
+<img src = "img/kl-divergence-formula.png" />
 
 </center>
 
