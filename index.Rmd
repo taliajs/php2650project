@@ -113,7 +113,7 @@ First, we will implement a Bayesian neural network using variational inference f
 <figure>
 <img src = "img/sine-plot.png" width = "500" />
 <figcaption aria-hidden="true"><em>Figure 1...</em></figcaption>
-<figure> 
+</figure> 
 
 
 <u>Concrete Data </u>

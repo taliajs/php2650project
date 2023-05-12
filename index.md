@@ -192,7 +192,7 @@ inference for a sine function:
 <figcaption aria-hidden="true">
 <em>Figure 1…</em>
 </figcaption>
-<figure>
+</figure>
 
 <u>Concrete Data </u>
 
