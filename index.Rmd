@@ -40,7 +40,7 @@ This method takes a traditional Bayesian approach to estimate the posterior, whe
 
 <center> 
 
-<img src = "img/bayes-posterior.png" />
+<img src = "img/bayes-posterior.png" width = "200"/>
 
 </center>
 
@@ -48,7 +48,7 @@ After estimating the posterior, the predictive distribution [**INSERT EQUATION H
 
 <center> 
 
-<img src = "img/predictive-distribution.png" width = "250"/>
+<img src = "img/predictive-distribution.png" width = "200" />
 
 </center>
 
@@ -68,7 +68,7 @@ The most relevant MCMC method for Bayesian neural networks is the **Metropolis-H
 
 <center> 
 
-<img src = "img/acceptance-rate.png" width = "350" />
+<img src = "img/acceptance-rate.png" height = "50%" />
 
 </center>
 

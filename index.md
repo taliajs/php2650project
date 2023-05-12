@@ -78,7 +78,7 @@ distribution can be calculated as follows:
 
 <center>
 
-<img src = "img/bayes-posterior.png" />
+<img src = "img/bayes-posterior.png" width = "200"/>
 
 </center>
 
@@ -88,7 +88,7 @@ any new input:
 
 <center>
 
-<img src = "img/predictive-distribution.png" width = "250"/>
+<img src = "img/predictive-distribution.png" width = "200" />
 
 </center>
 
@@ -131,7 +131,7 @@ rate:
 
 <center>
 
-<img src = "img/acceptance-rate.png" width = "350" />
+<img src = "img/acceptance-rate.png" height = "50%" />
 
 </center>
 
