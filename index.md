@@ -184,9 +184,117 @@ be implemented.
 
 This dataset was found on UCI (or Kaggle??)
 
-This dataset contains information on different components used to make
-concrete, with the outcome of interest being concrete compressive
-strength
+This dataset contains information on 8 different components/features
+used to make concrete for 1,030 concrete samples, with the outcome of
+interest being concrete compressive strength. All the variables are
+quantitative.
+
+Description of the Dataset (from Kaggle):
+
+> Concrete is the most used material for construction in the world!
+> There are some components that should be combined to make the
+> concrete. These components can affect the compressive strength of the
+> concrete. To obtain the real compressive strength of concrete (target
+> labels in the dataset), an engineer needs to break the cylinder
+> samples under the compression-testing machine. The failure load is
+> divided by the cylinder’s cross-section to obtain the compressive
+> strength. Engineers use different kinds of concretes for different
+> building purposes. For example, the strength of concrete used for
+> residential buildings should not be lower than 2500 psi (17.2 MPa).
+> Concrete is a material with high strength in compression, but low
+> strength in tension. That is why engineers use reinforced concrete
+> (usually with steel rebars) to build structures.
+
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>
+Variable
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+cement
+</td>
+<td>
+Cement (kg in a m3 mixture)
+</td>
+</tr>
+<tr class="even">
+<td>
+slag
+</td>
+<td>
+Blast Furnace Stag (kg in a m3 mixture)
+</td>
+</tr>
+<tr class="odd">
+<td>
+flyash
+</td>
+<td>
+Fly Ash Stag (kg in a m3 mixture)
+</td>
+</tr>
+<tr class="even">
+<td>
+water
+</td>
+<td>
+Water (kg in a m3 mixture)
+</td>
+</tr>
+<tr class="odd">
+<td>
+superplasticizer
+</td>
+<td>
+Superplasticizer component (kg in a m3 mixture)
+</td>
+</tr>
+<tr class="even">
+<td>
+coarseaggregate
+</td>
+<td>
+Coarse Aggregate (kg in a m3 mixture)
+</td>
+</tr>
+<tr class="odd">
+<td>
+fineaggregate
+</td>
+<td>
+amount of Fine Aggregate (kg in a m3 mixture)
+</td>
+</tr>
+<tr class="even">
+<td>
+age
+</td>
+<td>
+Age of the concrete sample (in days); ranges from 1-365 days
+</td>
+</tr>
+<tr class="odd">
+<td>
+csMPa
+</td>
+<td>
+concrete compressive strength in MPa (output variable)
+</td>
+</tr>
+</tbody>
+</table>
 
 ## References
 
