@@ -118,10 +118,11 @@ distribution over choices in the next sample in the sequence conditioned
 on the previous choice \[**INSERT EQUATION HERE!!**\] \[1\].
 
 The idea behind MCMC is to construct a Markov Chain (a sequence of
-random samples Si, which probabilistically depends only on the previous
-sample Si-1, such that Si are distributed following a desired
-distribution \[2\]. Most MCMC algorithms require an initial burn in time
-before the Markov chain converges to the desired distribution \[1\].
+random samples S<sub>i, which probabilistically depends only on the
+previous sample Si-1 \[**get as s\_(i-1)**\], such that S<sub>i are
+distributed following a desired distribution \[2\]. Most MCMC algorithms
+require an initial burn in time before the Markov chain converges to the
+desired distribution \[1\].
 
 The most relevant MCMC method for Bayesian neural networks is the
 **Metropolis-Hastings** algorithm. This algorithm uses the proposal
@@ -185,7 +186,7 @@ pytorch libraries).
 
 First, we will implement a Bayesian neural network using variational
 inference for a sine function:
-<img src= "https://render.githubusercontent.com/render/math?math=1.5x^{2}">
+<img src= "https://render.githubusercontent.com/render/math?math=1.5sinx^{2}">
 
 ***EXPLANATION!!!!***
 
