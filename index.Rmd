@@ -78,10 +78,10 @@ This accept rate is equivalent to the ratio of posterior probabilities under the
 
 ## Approximate Inference/Variational Inference
 
+Variational inference is another method for learning the approximation of a posterior [2]. Variational inference generates a proposal posterior and compares that posterior to the observed or actual posterior from the data. The idea of variational inference is to set up a approximate posterior distribution [**EQUATION**] to model the posterior *p(w|D)*, where 
+where the distribution is parameterized by a set of parameters [PHI - INSERT SYMBOL!] [1,2]. Then, a loss function is used to update the posterior parameters until the loss is minimized. 
 
-Variational inference is a method for learning the approximation of a posterior that scales better than the MCMC algorithm [2]. Variational methods model the posterior *p(w|D)* using a parametrized equation [**INSERT EQUATION HERE**] called the approximate posterior. Then, the parameter (PHI - *INSERT SYMBOL HERE*) is tuned so it better approximates the intractable distribution [1]. 
-
-The common measure of closeness used is the **Kullback-Liebler divergence** (KL-divergence), a similarity measure for two distributions which is used to commonly measure dissimilarity between two observations [1]. The closer the KL-divergence is to 0, the closer/more informed the distributions are [1]. 
+A common loss function used is the **Kullback-Liebler divergence** (KL-divergence), which is a similarity measure for two distributions (measures the difference between two probability distributions): 
 
 <center> 
 
@@ -89,11 +89,17 @@ The common measure of closeness used is the **Kullback-Liebler divergence** (KL-
 
 </center>
 
-Variational inference generates a proposal posterior and compares that posterior with the observed posterior (the actual posterior from the data). In the KL-divergence equation above, the denominator (which represents the observed posterior), stays constant, and the numerator represents the proposal posterior. At each epoch, you fit a new posterior and compare it to the observed posterior; this would be the loss function. New weights are sampled for every new epoch (backprop and gradient descent are done on the parameters for each posterior distribution for each weight/node). 
+In the equation above, the log represents the two distributions. The numerator represents the posterior proposal, and the denominator, which represents the observed posterior, stays constant. At each epoch, you fit a new posterior and compare it to the observed posterior; this would be the loss function. Additionally, at every new epoch, new weights are sampled, and backpropagation and gradient descent is done on the parameters for each posterior distribution for each weight and node. 
 
-Variational inference are very similar to regular neural networks. There are still some issues with overfitting for variational inference, but it's a lot less overfitting compared to typical neural networks.
+
+**SOMETHING ABOUT EVIDENCE LOWER BOUND (ELBO??)**
+
+
 
 ### Bayes by Backpropagation 
+
+
+## Application
 
 
 ## References
