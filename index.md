@@ -187,6 +187,13 @@ inference for a sine function:
 
 ***EXPLANATION!!!!***
 
+<figure>
+<img src = "img/sine-plot.png" width = "500" />
+<figcaption aria-hidden="true">
+<em>Figure 1…</em>
+</figcaption>
+<figure>
+
 <u>Concrete Data </u>
 
 This dataset was found on Kaggle, an online platform that has publicly
