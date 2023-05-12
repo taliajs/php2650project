@@ -177,7 +177,10 @@ parameters for each posterior distribution for each weight and node.
 Bayes by Backpropagation is a backpropagation algorithm that is used for
 learning a probability distribution on the weights of a neural network
 \[4\]. This algorithm implements stochastic variational inference and
-regularizes the weights by minimizing the loss function.
+regularizes the weights by minimizing the loss function. Bayes by
+Backprop uses the unbiased estimates of the gradients in the cost
+function to learn the distribution of the weights in a neural network
+\[4\].
 
 **ELBO**? if different from KL-divergence, add this in before this
 section!!!
