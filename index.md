@@ -63,12 +63,12 @@ distribution over the weights (\[2\]) </em>
 </figure>
 
 Normally, a neural networks aims to use the training data
-<img src = "img/training-data.png" width = "200"/> to update the weight
+<img src = "img/training-data.png" width = "500"/> to update the weight
 parameters
 <img src = "https://render.githubusercontent.com/render/math?math=w"> so
 as to maximize a loss function *L(w)*. A neural network through the
 Bayesian approach aims to estimate the posterior distribution
-<img src = "img/posterior-distribution.png" width = "200"/>,the
+<img src = "img/posterior-distribution.png" width = "500"/>,the
 distribution of the weight parameters given the training data the model
 is fitted with \[1\].
 
@@ -162,9 +162,10 @@ posterior and compares that posterior to the observed or actual
 posterior from the data. The idea of variational inference is to set up
 a approximate posterior distribution \[**EQUATION**\] to model the
 posterior *p(w\|D)*, where where the distribution is parameterized by a
-set of parameters \[PHI - INSERT SYMBOL!\] \[1,2\]. Then, a loss
-function is used to update the posterior parameters until the loss is
-minimized.
+set of parameters
+<img src = "https://render.githubusercontent.com/render/math?math=\phi">
+\[1,2\]. Then, a loss function is used to update the posterior
+parameters until the loss is minimized.
 
 A common loss function used is the **Kullback-Liebler divergence**
 (KL-divergence), which is a similarity measure for two distributions
