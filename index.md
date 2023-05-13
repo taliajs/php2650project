@@ -226,13 +226,20 @@ prior of 0.1, using a feed-forward approach.
 <figure>
 <img src = "img/sine-plot.png" width = "500" />
 <figcaption aria-hidden="true">
-<em>Figure 2. Plot of ….</em>
+<em>Figure 2. Results froM Variational Inference Sine function
+implementation </em>
 </figcaption>
 </figure>
 
-***EXPLANATION!!!!***
-
--   The predicted mean model is close to the target function.
+When estimating one dimensional data, the variational methods
+demonstrate a really good prediction accuracy. This model consisted of 2
+hidden layers with 1000 neurons and 500 neurons respectively, and was
+trained for 3000 epochs. Outside of the upper and lower bounds of the x
+axis, the predicted mean model almost perfectly estimated the actual
+target function displayed, which was
+<img src = "img/sine-function.png" width = "45"> + 1. Also, the 99%
+confidence interval almost perfectly captured all the randomized values
+from the test set (Figure 2).
 
 <u>Concrete Data </u>
 
@@ -363,14 +370,21 @@ all the predicted variables.
     bnn.BayesLinear(prior_mu=0, prior_sigma=2, in_features=100, out_features=1),
     )
 
-***EXPLANATION***
-
 <figure>
-<img src = "img/variational-data.png" width = "500" />
+<img src = "img/variational-data2.png" width = "500" />
 <figcaption aria-hidden="true">
-<em>Figure 3. Plot of ….</em>
+<em>Figure 3. Variational Inference on Concrete Dataset.</em>
 </figcaption>
 </figure>
+
+In terms of the predicted outcomes, we see that although the neural
+network can somewhat capture trends (including the use of the error
+bars), the predictions are not able to properly predict concretes with
+high and low compressive strength (MPa) values. This model consisted of
+2 hidden layers 1000 neurons and 500 neurons respectively, used a
+sigmoid activation function, and was trained for 5000 epochs. The
+training of this model however only took 5 minutes and 48 seconds with
+the vast amount of parameters trained (Figure 3).
 
 ### MCMC Sampling
 
@@ -405,33 +419,51 @@ likelihood function: r<br/>
 <img src = "img/mcmc-likelihood.png" width = "500"/>
 </center>
 
-1.  Using the likelihoods found in steps 3 and 4, check if proposal
-    distribution should be accepted by using Metropolis-Hasting
-    algorithm/equation to compute the posterior probability:
+5. Using the likelihoods found in steps 3 and 4, check if proposal
+distribution should be accepted by using Metropolis-Hasting
+algorithm/equation to compute the posterior probability: r<br/>
 
 <center>
 <img src = "img/log-posterior.png" width = "450"/>
 </center>
 
-1.  If the proposal is accepted, the proposal distribution becomes a
-    part of the MCMC chain. If the proposal is not accepted, keep the
-    current state of the chain.
+6. If the proposal is accepted, the proposal distribution becomes a part
+of the MCMC chain. If the proposal is not accepted, keep the current
+state of the chain.
 
 These steps are repeated until the maximum number of samples are
 reached.
 
-1.  Obtain posterior distribution by combining the samples in the chain.
-
-***MENTION THE ALGORITHM USED***
+7. Obtain posterior distribution by combining the samples in the chain.
 
 <figure>
-<img src = "img/mcmc-data.png" width = "500" />
+<img src = "img/mcmc-data2.png" width = "500" />
 <figcaption aria-hidden="true">
-<em>Figure 4. Plot of ….</em>
+<em>Figure 4. MCMC Sampling Results on Concrete Dataset </em>
 </figcaption>
 </figure>
 
-***EXPLANATION*** (of plot!!)
+In terms of the predicted outcomes, we see that these results are more
+accurate when compared to the predicted results when using the
+variational method, especially in terms of accounting for outliers.
+However, do note that the amount of time it took to train the model of
+2000 epochs took 2 minutes and 7 seconds, and this was only with 1 layer
+of 100 nodes along with a sigmoid activation function. This computation
+time was nearly half the time when compared to the variational method
+with much more parameters fitted. The computation time required,
+especially when increasing the layers and neurons, will scale much
+higher when compared to using variational methods, so this is an
+important tradeoff to keep in mind (Figure 4).
+
+## Summary
+
+Bayesian neural networks can be used to learn/estimate a probability
+distribution over neural networks, can reduce overfitting and can inform
+how much uncertainty a model has. However, one main downside of BNNs is
+that it is more computationally expensive. BNNs take more computation
+time due to having to calculate posterior parameters and having to do
+more sampling. This increase in computation time is a bigger issue when
+it comes to sampling approximation methods like MCMC sampling.
 
 ## References
 
