@@ -64,7 +64,7 @@ parameters
 <img src = "https://render.githubusercontent.com/render/math?math=w"> so
 as to maximize a loss function *L(w)*. A neural network through the
 Bayesian approach aims to estimate the posterior distribution
-<img src = "img/posterior-distribution.png" width = "50"/>,the
+<img src = "img/posterior-distribution.png" width = "65"/>,the
 distribution of the weight parameters given the training data the model
 is fitted with \[1\].
 
@@ -191,7 +191,9 @@ which is used to commonly measure dissimilarity between two observations
 </center>
 
 The compression cost formula can be seen in the second line of the
-KL-divergence formula/equation. Bayes by Backprop uses the unbiased
+KL-divergence formula/equation. **Bayes by Backprop**, which is a
+backpropagation algorithm that is used for learning a probability
+distribution on the weights of a neural network, uses the unbiased
 estimates of the gradients in the cost function to learn the
 distribution of the weights of a neural network \[4\].
 
@@ -379,24 +381,25 @@ and biases) \[6\].
     <img src = "https://render.githubusercontent.com/render/math?math=\theta_0">
     from the prior
 
-2.  Generate proposal distribution for
-    <img src = "https://render.githubusercontent.com/render/math?math=\theta^p">,
-    which incorporates the model weights and
+2.  Generate proposal distribution for \[**theta^p**\], which
+    incorporates the model weights and
     <img src = "https://render.githubusercontent.com/render/math?math=\tau^2">
     from a Langevin gradient or random walk proposal distribution.
 
-3.  Evaluate the likelihood of the prior: (equation 23)
+3.  Evaluate the likelihood of the prior:
 
-4.  Proposal distribution evaluated using BNN model with the following
+<img src = "img/mcmc-prior.png" width = "500"/>
+
+1.  Proposal distribution evaluated using BNN model with the following
     likelihood function:
 
-\<img src = “img/mcmc-likelihood.png”, width = “500”/\>
+<img src = "img/mcmc-likelihood.png" width = "500"/>
 
 1.  Use the likelihoods found in steps 3 and 4, check if proposal
     distribution should be accepted by using Metropolis-Hasting
     algorithm/equation to compute the posterior probability:
 
-\<img src = “img/log-posterior.png”, width = “500”/\>
+<img src = "img/log-posterior.png" width = "500"/>
 
 1.  If the proposal is accepted, the proposal distribution becomes a
     part of the MCMC chain. If the proposal is not accepted, keep the
