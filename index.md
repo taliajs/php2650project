@@ -132,7 +132,7 @@ S<sub>i</sub> are distributed following a desired distribution \[2\].
 Most MCMC algorithms require an initial burn in time before the Markov
 chain converges to the desired distribution \[1\].
 
-The most relevant MCMC method for Bayesian neural networks is the
+A popular MCMC method for Bayesian neural networks is the
 **Metropolis-Hastings** algorithm. This algorithm uses the proposal
 distribution mentioned earlier to generate a set of samples that
 asymptotically are distributed according to *p(w\|D)* \[1\]. The Markov
