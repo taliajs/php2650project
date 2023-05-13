@@ -51,7 +51,7 @@ unlabeled dataset) and online learning (where a model is retrained as
 new data becomes available) \[2\].
 
 <figure>
-<img src = "img/neural-network2.png" width = "500" />
+<img src = "img/neural-network2.png" width = "300" />
 <figcaption aria-hidden="true">
 <em>Figure 1. Stochastic neural network with a probability distribution
 over the weights (2) </em>
@@ -59,12 +59,12 @@ over the weights (2) </em>
 </figure>
 
 Normally, a neural networks aims to use the training data
-<img src = "img/training-data.png" width = "100"/> to update the weight
+<img src = "img/training-data.png" width = "200"/> to update the weight
 parameters
 <img src = "https://render.githubusercontent.com/render/math?math=w"> so
 as to maximize a loss function *L(w)*. A neural network through the
 Bayesian approach aims to estimate the posterior distribution
-<img src = "img/posterior-distribution.png" width = "100"/>,the
+<img src = "img/posterior-distribution.png" width = "120"/>,the
 distribution of the weight parameters given the training data the model
 is fitted with \[1\].
 
