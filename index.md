@@ -161,11 +161,11 @@ Approximating the posterior through variational methods is done through
 a way where the learning the approximation of a posterior scales better
 than the MCMC algorithm \[2\]. Variational methods model the posterior
 *p(w\|D)* using a parametrized distribution,
-<img src = img/approximate-posterior.png" width = "45"/> called the
+<img src = "img/accept-posterior-prob.png" width = "45"/> called the
 **approximate posterior** (which is a “parametrized, tractable-stand in
 distribution” \[1\]) (The parametrized variational distribution over the
-weights <img src = img/approximate-posterior.png" width = "45"/> is
-specified). Then, the parameter  
+weights <img src = "img/approximate-posterior.png" /> is specified).
+Then, the parameter
 <img src = "https://render.githubusercontent.com/render/math?math=\phi">
 is tuned so it better approximates the intractable distribution \[1\].
 This approximation is teratively improved by solving a suitable
@@ -210,10 +210,10 @@ Backprop and MCMC on bayesian neural networks using Python (keras and
 pytorch libraries).
 
 First, we will implement a Bayesian neural network using variational
-inference for a sine function: \<img src = “img/sine-function.png width
-=”45”/\> with some randomness (+1 on average). We fit a Bayesian neural
-network with 3 layers, with a prior of 0.1, using a feed-forward
-approach.
+inference for a sine function:
+<img src = "img/sine-function.png" width = "45"> with some randomness
+(+1 on average). We fit a Bayesian neural network with 3 layers, with a
+prior of 0.1, using a feed-forward approach.
 
     model = nn.Sequential(
     bnn.BayesLinear(prior_mu=0, prior_sigma=0.1, in_features=1, out_features=1000),
@@ -398,8 +398,8 @@ and biases) \[6\].
 <img src = "img/mcmc-prior.png" width = "500"/>
 </center>
 
-1.  Proposal distribution is valuated using BNN model with the following
-    likelihood function:
+4. item 1<br/> 4. Proposal distribution is valuated using BNN model with
+the following likelihood function:
 
 <center>
 <img src = "img/mcmc-likelihood.png" width = "500"/>
