@@ -57,19 +57,20 @@ new data becomes available) \[2\].
 <em>Figure 1. Different types of neural networks. a: point estimate
 neural network, the standard approach for neural networks. b: a
 stochastic neural network with probability distributions for the
-activations. c) a stochastic neural network with a probability
-distribution over the weights \[2\]. </em>
+activations. c: a stochastic neural network with a probability
+distribution over the weights (\[2\]) </em>
 </figcaption>
 </figure>
 
-Normally, a neural networks aims to use the training data \[**INSERT
-D_train** as a mathematical formula with subscript\] to update the
-weight parameters
+Normally, a neural networks aims to use the training data
+<img src = "img/training-data.png" width = "200"/> to update the weight
+parameters
 <img src = "https://render.githubusercontent.com/render/math?math=w"> so
 as to maximize a loss function *L(w)*. A neural network through the
-Bayesian approach aims to estimate the posterior distribution (**INSERT
-EQUATION HERE**), the distribution of the weight parameters given the
-training data the model is fitted with \[1\].
+Bayesian approach aims to estimate the posterior distribution
+<img src = "img/posterior-distribution.png" width = "200"/>,the
+distribution of the weight parameters given the training data the model
+is fitted with \[1\].
 
 There are several ways to estimate this posterior distribution - using
 **exact inference**, approximating the posterior through **sampling
