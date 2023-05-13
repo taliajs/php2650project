@@ -83,8 +83,8 @@ This accept rate is equivalent to the ratio of posterior probabilities under the
 
 ## Approximate Inference/Variational Inference
 
-Approximating the posterior through variational methods is done through a way where the learning the approximation of a posterior scales better than the MCMC algorithm [2]. Variational methods model the posterior *p(w|D)* using a parametrized distribution, <img src = "https://render.githubusercontent.com/render/math?math=q_\phi(w)"> called the **approximate posterior** (which is a “parametrized, tractable-stand in distribution” [1]) (The parametrized variational distribution over the weights [img src = "https://render.githubusercontent.com/render/math?math=q_\phi(w)"> is specified). 
-Then, the parameter  <img src = "https://render.githubusercontent.com/render/math?math=\phi"> is tuned so it better approximates the intractable distribution [1]. This approximation is teratively improved by solving a suitable optimization problem [1]. 
+Approximating the posterior through variational methods is done through a way where the learning the approximation of a posterior scales better than the MCMC algorithm [2]. Variational methods model the posterior *p(w|D)* using a parametrized distribution, <img src = img/approximate-posterior.png" width = "45"/> called the **approximate posterior** (which is a “parametrized, tractable-stand in distribution” [1]) (The parametrized variational distribution over the weights <img src = img/approximate-posterior.png" width = "45"/>  is specified). Then, the parameter  
+<img src = "https://render.githubusercontent.com/render/math?math=\phi"> is tuned so it better approximates the intractable distribution [1]. This approximation is teratively improved by solving a suitable optimization problem [1]. 
 
 The type of variational method we’ll be focusing on is Bayes by backpropagation, or backprop for short. This is an implementation of stochastic variational inference that is combined with a “reparametrization trick” to ensure backpropagation works [2]. Bayes by backprop is a backpropagation compatible algorithm for learning a probability distribution on the weights of a neural network. This algorithm regularizes the weights by minimizing a compression cost (also known as variational free energy) or the expected lower bound on the marginal likelihood [4].
 Backpropagation is typically used to train the posterior distribution parameters to the input and output data based on the optimization problem. This method makes it similar to the standard neural networks, where they use an optimization problem to directly update the weights for prediction.
@@ -105,7 +105,7 @@ The compression cost formula can be seen in the second line of the KL-divergence
 We will implement variational inference using Kullback-Liebler/Bayes by Backprop and MCMC on bayesian neural networks using Python (keras and pytorch libraries).
 
 
-First, we will implement a Bayesian neural network using variational inference for a sine function: <img src = "img/sine-function.png width = "45" />with some randomness (+1 on average). We fit a Bayesian neural network with 3 layers, with a prior of 0.1, using a feed-forward approach. 
+First, we will implement a Bayesian neural network using variational inference for a sine function: <img src = "img/sine-function.png width = "45"/> with some randomness (+1 on average). We fit a Bayesian neural network with 3 layers, with a prior of 0.1, using a feed-forward approach. 
 
     model = nn.Sequential(
     bnn.BayesLinear(prior_mu=0, prior_sigma=0.1, in_features=1, out_features=1000),
@@ -212,23 +212,25 @@ For MCMC, the y values were divided by 100 to be within a 0 to 1 scale for predi
 
 1. Draw initial values <img src = "https://render.githubusercontent.com/render/math?math=\theta_0"> from the prior
 
-2. Generate proposal distribution for [**theta^p**], which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. 
+2. Generate proposal distribution for <img src = img/theta-p.png" width = "45"/>  which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. 
 
 3. Evaluate the likelihood of the prior: 
 
-<center> 
-<img src = "img/mcmc-prior.png" width = "500"/>
-</center>
+  <center> 
+  <img src = "img/mcmc-prior.png" width = "500"/>
+  </center>
 
-4. Proposal distribution evaluated using BNN model with the following likelihood function: 
+4. Proposal distribution is valuated using BNN model with the following likelihood function: 
 
-<center>
-<img src = "img/mcmc-likelihood.png" width = "500"/>
-</center>
+  <center>
+  <img src = "img/mcmc-likelihood.png" width = "500"/>
+  </center>
 
-5. Use the likelihoods found in steps 3 and 4, check if proposal distribution should be accepted by using Metropolis-Hasting algorithm/equation to compute the posterior probability: 
-
-<img src = "img/log-posterior.png" width = "500"/>
+5. Using the likelihoods found in steps 3 and 4, check if proposal distribution should be accepted by using Metropolis-Hasting algorithm/equation to compute the posterior probability: 
+  
+  <center>
+  <img src = "img/log-posterior.png" width = "450"/>
+  </center> 
 
 6. If the proposal is accepted, the proposal distribution becomes a part of the MCMC chain. If the proposal is not accepted, keep the current state of the chain. 
 
