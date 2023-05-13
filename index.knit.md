@@ -5,11 +5,7 @@ output:
     variant: markdown_github
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 
-#setwd("C:/Users/tjses/OneDrive/Documents/Spring 2023/PHP 2650 - Big Data/Final Project/php2650project")
-```
 
 # Applying Bayesian Inference into Neural Networks
 

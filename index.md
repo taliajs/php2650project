@@ -51,6 +51,17 @@ useful in active learning (human or algorithm labels new points from an
 unlabeled dataset) and online learning (where a model is retrained as
 new data becomes available) \[2\].
 
+<figure>
+<img src = "img/neural-network.png" width = "500" />
+<figcaption aria-hidden="true">
+<em>Figure 1. Different types of neural networks. a: point estimate
+neural network, the standard approach for neural networks. b: a
+stochastic neural network with probability distributions for the
+activations. c) a stochastic neural network with a probability
+distribution over the weights \[2\]. </em>
+</figcaption>
+</figure>
+
 Normally, a neural networks aims to use the training data \[**INSERT
 D_train** as a mathematical formula with subscript\] to update the
 weight parameters
@@ -333,9 +344,8 @@ concrete compressive strength in MPa (output variable)
 </table>
 
 We will implement variational and sampling methods on this concrete
-linear regression dataset.
-
-**PREPROCESSING** - ***ADD!!***
+linear regression dataset. To prevent gradient explosion we standardized
+all the predicted variables.
 
 ### Variational Inference
 
@@ -347,7 +357,9 @@ linear regression dataset.
 
 For implementing MCMC, we used an algorithm from Chandra et al that used
 Langevin-based MCMC sampling on a Bayesian neural network framework
-\[6\].
+\[6\]. For MCMC, the y values were divided by 100 to be within a 0 to 1
+scale for prediction. The y values were rescaled back to the original
+concrete mpa values after predicting the values.
 
 ***EXPLANATION***
 
