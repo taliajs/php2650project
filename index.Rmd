@@ -36,7 +36,7 @@ Bayesian neural networks are neural networks that are trained using a Bayesian a
 <figcaption aria-hidden="true"><em>Figure 1. Stochastic neural network with a probability distribution over the weights (2) </em></figcaption>
 </figure> 
 
-Normally, a neural networks aims to use the training data <img src = "img/training-data.png" width = "25"/> to update the weight parameters <img src = "https://render.githubusercontent.com/render/math?math=w"> so as to maximize a loss function *L(w)*. A neural network through the Bayesian approach aims to estimate the posterior distribution <img src = "img/posterior-distribution.png" width = "25"/>,the distribution of the weight parameters given the training data the model is fitted with [1]. 
+Normally, a neural networks aims to use the training data <img src = "img/training-data.png" width = "50"/> to update the weight parameters <img src = "https://render.githubusercontent.com/render/math?math=w"> so as to maximize a loss function *L(w)*. A neural network through the Bayesian approach aims to estimate the posterior distribution <img src = "img/posterior-distribution.png" width = "50"/>,the distribution of the weight parameters given the training data the model is fitted with [1]. 
 
 There are several ways to estimate this posterior distribution - using **exact inference**, approximating the posterior through **sampling methods/techniques**, or using **variational inference** to approximate the posterior distribution. Our project will explore these three methods, and how these methods can be implemented. 
 
