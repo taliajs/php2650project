@@ -127,11 +127,15 @@ on the previous choice
 <img src = "img/sample-independence.png" width = "45"/> \[1\].
 
 The idea behind MCMC is to construct a Markov Chain (a sequence of
-random samples S<sub>*i*</sub>) which probabilistically depends only on
-the previous sample Si-1 \[**get as s\_(i-1)**\], such that
-S<sub>i</sub> are distributed following a desired distribution \[2\].
-Most MCMC algorithms require an initial burn in time before the Markov
-chain converges to the desired distribution \[1\].
+random samples
+<img src = "https://render.githubusercontent.com/render/math?math=S_i">)
+which probabilistically depends only on the previous sample
+<img src = "https://render.githubusercontent.com/render/math?math=S_{i-1}">,
+such that
+<img src = "https://render.githubusercontent.com/render/math?math=S_i">
+are distributed following a desired distribution \[2\]. Most MCMC
+algorithms require an initial burn in time before the Markov chain
+converges to the desired distribution \[1\].
 
 A popular MCMC method for Bayesian neural networks is the
 **Metropolis-Hastings** algorithm. This algorithm uses the proposal
@@ -148,8 +152,8 @@ rate:
 </center>
 
 This accept rate is equivalent to the ratio of posterior probabilities
-under the proposed and most recent samples \[**INSERT EQUATION HERE**\]
-\[1\].
+under the proposed and most recent samples
+<img src = "img/accept-posterior-prob.png" width = "45"/>\[1\].
 
 ## Approximate Inference/Variational Inference
 
