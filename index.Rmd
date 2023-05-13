@@ -83,10 +83,13 @@ This accept rate is equivalent to the ratio of posterior probabilities under the
 
 ## Approximate Inference/Variational Inference
 
-Variational inference is another method for learning the approximation of a posterior [2]. Variational inference generates a proposal posterior and compares that posterior to the observed or actual posterior from the data. The idea of variational inference is to set up a approximate posterior distribution [**EQUATION**] to model the posterior *p(w|D)*, where 
-where the distribution is parameterized by a set of parameters <img src = "https://render.githubusercontent.com/render/math?math=\phi"> [1,2]. Then, a loss function is used to update the posterior parameters until the loss is minimized. 
+Approximating the posterior through variational methods is done through a way where the learning the approximation of a posterior scales better than the MCMC algorithm [2]. Variational methods model the posterior *p(w|D)* using a parametrized distribution, [**INSERT EQUATION HERE**] called the **approximate posterior** (which is a “parametrized, tractable-stand in distribution” [1]) (The parametrized variational distribution over the weights [**INSERT EQUATION HERE**)). 
+Then, the parameter  <img src = "https://render.githubusercontent.com/render/math?math=\phi"> is tuned so it better approximates the intractable distribution [1]. This approximation is teratively improved by solving a suitable optimization problem [1]. 
 
-A common loss function used is the **Kullback-Liebler divergence** (KL-divergence), which is a similarity measure for two distributions (measures the difference between two probability distributions): 
+The type of variational method we’ll be focusing on is Bayes by backpropagation, or backprop for short. This is an implementation of stochastic variational inference that is combined with a “reparametrization trick” to ensure backpropagation works [2]. Bayes by backprop is a backpropagation compatible algorithm for learning a probability distribution on the weights of a neural network. This algorithm regularizes the weights by minimizing a compression cost (also known as variational free energy) or the expected lower bound on the marginal likelihood [4].
+Backpropagation is typically used to train the posterior distribution parameters to the input and output data based on the optimization problem. This method makes it similar to the standard neural networks, where they use an optimization problem to directly update the weights for prediction.
+
+The common measure of closeness used is the **Kullback-Liebler divergence** (KL-divergence), a similarity measure for two distributions which is used to commonly measure dissimilarity between two observations [1].
 
 <center> 
 
@@ -94,13 +97,7 @@ A common loss function used is the **Kullback-Liebler divergence** (KL-divergenc
 
 </center>
 
-In the equation above, the log represents the two distributions. The numerator represents the posterior proposal, and the denominator, which represents the observed posterior, stays constant. At each epoch, you fit a new posterior and compare it to the observed posterior; this would be the loss function. Additionally, at every new epoch, new weights are sampled, and backpropagation and gradient descent is done on the parameters for each posterior distribution for each weight and node. 
-
-### Bayes by Backpropagation 
-
-Bayes by Backpropagation is a backpropagation algorithm that is used for learning a probability distribution on the weights of a neural network [4]. This algorithm implements stochastic variational inference and regularizes the weights by minimizing the loss function. Bayes by Backprop uses the unbiased estimates of the gradients in the cost function to learn the distribution of the weights in a neural network [4]. 
-
-**ELBO**? if different from KL-divergence, add this in before this section!!!
+The compression cost formula can be seen in the second line of the KL-divergence formula/equation. Bayes by Backprop uses the unbiased estimates of the gradients in the cost function to learn the distribution of the weights of a neural network [4]. 
 
 
 ## Application
