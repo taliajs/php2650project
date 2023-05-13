@@ -161,10 +161,10 @@ Approximating the posterior through variational methods is done through
 a way where the learning the approximation of a posterior scales better
 than the MCMC algorithm \[2\]. Variational methods model the posterior
 *p(w\|D)* using a parametrized distribution,
-<img src = "img/approximate-posterior.png" width = "45"/> called the
+<img src = "img/approximate-posterior.png" width = "35"/> called the
 **approximate posterior** (which is a “parametrized, tractable-stand in
 distribution” \[1\]) (The parametrized variational distribution over the
-weights <img src = "img/approximate-posterior.png" width = "45" /> is
+weights <img src = "img/approximate-posterior.png" width = "35" /> is
 specified). Then, the parameter
 <img src = "https://render.githubusercontent.com/render/math?math=\phi">
 is tuned so it better approximates the intractable distribution \[1\].
@@ -237,7 +237,7 @@ hidden layers with 1000 neurons and 500 neurons respectively, and was
 trained for 3000 epochs. Outside of the upper and lower bounds of the x
 axis, the predicted mean model almost perfectly estimated the actual
 target function displayed, which was
-<img src = "img/sine-function.png" width = "45"> + 1. Also, the 99%
+<img src = "img/sine-target-function.png" width = "45">. Also, the 99%
 confidence interval almost perfectly captured all the randomized values
 from the test set (Figure 2).
 
@@ -404,37 +404,43 @@ from the prior<br/>
 <img src = img/theta-p.png" width = "45"/> which incorporates the model
 weights and
 <img src = "https://render.githubusercontent.com/render/math?math=\tau^2">
-from a Langevin gradient or random walk proposal distribution. r<br/>
+from a Langevin gradient or random walk proposal distribution.
 
-3. Evaluate the likelihood of the prior: r<br/>
+1.  Evaluate the likelihood of the prior:
 
-<center>
-<img src = "img/mcmc-prior.png" width = "500"/>
-</center>
+    <center>
 
-4. Proposal distribution is valuated using BNN model with the following
-likelihood function: r<br/>
+    <img src = "img/mcmc-prior.png" width = "500"/>
 
-<center>
-<img src = "img/mcmc-likelihood.png" width = "500"/>
-</center>
+    </center>
 
-5. Using the likelihoods found in steps 3 and 4, check if proposal
-distribution should be accepted by using Metropolis-Hasting
-algorithm/equation to compute the posterior probability: r<br/>
+2.  Proposal distribution is valuated using BNN model with the following
+    likelihood function:
 
-<center>
-<img src = "img/log-posterior.png" width = "450"/>
-</center>
+    <center>
 
-6. If the proposal is accepted, the proposal distribution becomes a part
-of the MCMC chain. If the proposal is not accepted, keep the current
-state of the chain.
+    <img src = "img/mcmc-likelihood.png" width = "450"/>
+
+    </center>
+
+3.  Using the likelihoods found in steps 3 and 4, check if proposal
+    distribution should be accepted by using Metropolis-Hasting
+    algorithm/equation to compute the posterior probability:
+
+    <center>
+
+    <img src = "img/log-posterior.png" width = "425"/>
+
+    </center>
+
+4.  If the proposal is accepted, the proposal distribution becomes a
+    part of the MCMC chain. If the proposal is not accepted, keep the
+    current state of the chain.
 
 These steps are repeated until the maximum number of samples are
 reached.
 
-7. Obtain posterior distribution by combining the samples in the chain.
+1.  Obtain posterior distribution by combining the samples in the chain.
 
 <figure>
 <img src = "img/mcmc-data2.png" width = "500" />

@@ -83,7 +83,7 @@ This accept rate is equivalent to the ratio of posterior probabilities under the
 
 ## Approximate Inference/Variational Inference
 
-Approximating the posterior through variational methods is done through a way where the learning the approximation of a posterior scales better than the MCMC algorithm [2]. Variational methods model the posterior *p(w|D)* using a parametrized distribution,  <img src = "img/approximate-posterior.png" width = "45"/> called the **approximate posterior** (which is a “parametrized, tractable-stand in distribution” [1]) (The parametrized variational distribution over the weights <img src = "img/approximate-posterior.png" width = "45" />  is specified). Then, the parameter <img src = "https://render.githubusercontent.com/render/math?math=\phi"> is tuned so it better approximates the intractable distribution [1]. This approximation is teratively improved by solving a suitable optimization problem [1]. 
+Approximating the posterior through variational methods is done through a way where the learning the approximation of a posterior scales better than the MCMC algorithm [2]. Variational methods model the posterior *p(w|D)* using a parametrized distribution,  <img src = "img/approximate-posterior.png" width = "35"/> called the **approximate posterior** (which is a “parametrized, tractable-stand in distribution” [1]) (The parametrized variational distribution over the weights <img src = "img/approximate-posterior.png" width = "35" />  is specified). Then, the parameter <img src = "https://render.githubusercontent.com/render/math?math=\phi"> is tuned so it better approximates the intractable distribution [1]. This approximation is teratively improved by solving a suitable optimization problem [1]. 
 
 The type of variational method we’ll be focusing on is Bayes by backpropagation, or backprop for short. This is an implementation of stochastic variational inference that is combined with a “reparametrization trick” to ensure backpropagation works [2]. Bayes by backprop is a backpropagation compatible algorithm for learning a probability distribution on the weights of a neural network. This algorithm regularizes the weights by minimizing a compression cost (also known as variational free energy) or the expected lower bound on the marginal likelihood [4].
 Backpropagation is typically used to train the posterior distribution parameters to the input and output data based on the optimization problem. This method makes it similar to the standard neural networks, where they use an optimization problem to directly update the weights for prediction.
@@ -119,7 +119,7 @@ First, we will implement a Bayesian neural network using variational inference f
 <figcaption aria-hidden="true"><em>Figure 2. Results froM Variational Inference Sine function implementation </em></figcaption>
 </figure> 
 
-When estimating one dimensional data, the variational methods demonstrate a really good prediction accuracy. This model consisted of 2 hidden layers with 1000 neurons and 500 neurons respectively, and was trained for 3000 epochs. Outside of the upper and lower bounds of the x axis, the predicted mean model almost perfectly estimated the actual target function displayed, which was <img src = "img/sine-function.png" width = "45"> + 1. Also, the 99% confidence interval almost perfectly captured all the randomized values from the test set (Figure 2). 
+When estimating one dimensional data, the variational methods demonstrate a really good prediction accuracy. This model consisted of 2 hidden layers with 1000 neurons and 500 neurons respectively, and was trained for 3000 epochs. Outside of the upper and lower bounds of the x axis, the predicted mean model almost perfectly estimated the actual target function displayed, which was <img src = "img/sine-target-function.png" width = "45">. Also, the 99% confidence interval almost perfectly captured all the randomized values from the test set (Figure 2). 
 
 
 
@@ -210,32 +210,31 @@ For MCMC, the y values were divided by 100 to be within a 0 to 1 scale for predi
 
 <span>1.</span>  Draw initial values <img src = "https://render.githubusercontent.com/render/math?math=\theta_0"> from the prior<br/>
 
+<span>2.</span> Generate proposal distribution for <img src = img/theta-p.png" width = "45"/>  which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. 
 
-<span>2.</span> Generate proposal distribution for <img src = img/theta-p.png" width = "45"/>  which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. r<br/>
+3. Evaluate the likelihood of the prior: 
 
-<span>3.</span> Evaluate the likelihood of the prior: r<br/>
+    <center> 
+    <img src = "img/mcmc-prior.png" width = "500"/>
+    </center>
 
-  <center> 
-  <img src = "img/mcmc-prior.png" width = "500"/>
-  </center>
+4. Proposal distribution is valuated using BNN model with the following likelihood function: 
 
-<span>4.</span>  Proposal distribution is valuated using BNN model with the following likelihood function: r<br/>
+    <center>
+    <img src = "img/mcmc-likelihood.png" width = "450"/>
+    </center>
 
-  <center>
-  <img src = "img/mcmc-likelihood.png" width = "500"/>
-  </center>
+5. Using the likelihoods found in steps 3 and 4, check if proposal distribution should be accepted by using Metropolis-Hasting algorithm/equation to compute the posterior probability: 
 
-<span>5.</span> Using the likelihoods found in steps 3 and 4, check if proposal distribution should be accepted by using Metropolis-Hasting algorithm/equation to compute the posterior probability: r<br/>
+    <center>
+    <img src = "img/log-posterior.png" width = "425"/>
+    </center> 
 
-  <center>
-  <img src = "img/log-posterior.png" width = "450"/>
-  </center> 
-
-<span>6. </span> If the proposal is accepted, the proposal distribution becomes a part of the MCMC chain. If the proposal is not accepted, keep the current state of the chain. 
+6. If the proposal is accepted, the proposal distribution becomes a part of the MCMC chain. If the proposal is not accepted, keep the current state of the chain. 
 
 These steps are repeated until the maximum number of samples are reached.
 
-<span>7. </span> Obtain posterior distribution by combining the samples in the chain. 
+7. Obtain posterior distribution by combining the samples in the chain. 
 
 
 <figure>
