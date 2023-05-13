@@ -59,12 +59,12 @@ over the weights (2) </em>
 </figure>
 
 Normally, a neural networks aims to use the training data
-<img src = "img/training-data.png" width = "50"/> to update the weight
+<img src = "img/training-data.png" width = "45"/> to update the weight
 parameters
 <img src = "https://render.githubusercontent.com/render/math?math=w"> so
 as to maximize a loss function *L(w)*. A neural network through the
 Bayesian approach aims to estimate the posterior distribution
-<img src = "img/posterior-distribution.png" width = "65"/>,the
+<img src = "img/posterior-distribution.png" width = "60"/>,the
 distribution of the weight parameters given the training data the model
 is fitted with \[1\].
 
@@ -92,9 +92,9 @@ distribution can be calculated as follows:
 
 </center>
 
-After estimating the posterior, the predictive distribution \[**INSERT
-EQUATION HERE**\] can be calculated to estimate the output values given
-any new input:
+After estimating the posterior, the predictive distribution
+<img src = "img/pred-dist-inline.png" width = "45"/> can be calculated
+to estimate the output values given any new input:
 
 <center>
 
@@ -123,7 +123,8 @@ dimensionality problems \[1\].
 The assumption of sample independence is sacrificed by using a Markov
 Chain to produce a sequence of dependent samples \[3\], with a proposal
 distribution over choices in the next sample in the sequence conditioned
-on the previous choice \[**INSERT EQUATION HERE!!**\] \[1\].
+on the previous choice
+<img src = "img/sample-independence.png" width = "45"/> \[1\].
 
 The idea behind MCMC is to construct a Markov Chain (a sequence of
 random samples S<sub>*i*</sub>) which probabilistically depends only on
@@ -388,12 +389,16 @@ and biases) \[6\].
 
 3.  Evaluate the likelihood of the prior:
 
+<center>
 <img src = "img/mcmc-prior.png" width = "500"/>
+</center>
 
 1.  Proposal distribution evaluated using BNN model with the following
     likelihood function:
 
+<center>
 <img src = "img/mcmc-likelihood.png" width = "500"/>
+</center>
 
 1.  Use the likelihoods found in steps 3 and 4, check if proposal
     distribution should be accepted by using Metropolis-Hasting
