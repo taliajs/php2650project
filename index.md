@@ -44,21 +44,17 @@ Bayesian approach \[2\], meaning that the neural network has a prior on
 its weights \[3\]. BNNs are a promising paradigm that allows the
 generalization of applying deep learning in areas where a system is not
 allowed to fail \[2\]. These networks are about modeling uncertainty in
-parameters \[2\]. By modeling uncertainty, BNNs provides better
-prediction accuracy under the same model, and provides better
+parameters \[2\]. By modeling uncertainty, BNNs provide better
 uncertainty estimation for a predictive distribution \[3\]. BNNs are
 useful in active learning (human or algorithm labels new points from an
 unlabeled dataset) and online learning (where a model is retrained as
 new data becomes available) \[2\].
 
 <figure>
-<img src = "img/neural-network.png" width = "500" />
+<img src = "img/neural-network2.png" width = "500" />
 <figcaption aria-hidden="true">
-<em>Figure 1. Different types of neural networks. a: point estimate
-neural network, the standard approach for neural networks. b: a
-stochastic neural network with probability distributions for the
-activations. c: a stochastic neural network with a probability
-distribution over the weights (\[2\]) </em>
+<em>Figure 1. Stochastic neural network with a probability distribution
+over the weights (2) </em>
 </figcaption>
 </figure>
 
@@ -130,11 +126,11 @@ distribution over choices in the next sample in the sequence conditioned
 on the previous choice \[**INSERT EQUATION HERE!!**\] \[1\].
 
 The idea behind MCMC is to construct a Markov Chain (a sequence of
-random samples S_i) which probabilistically depends only on the previous
-sample Si-1 \[**get as s\_(i-1)**\], such that Si are distributed
-following a desired distribution \[2\]. Most MCMC algorithms require an
-initial burn in time before the Markov chain converges to the desired
-distribution \[1\].
+random samples S<sub>*i*</sub>) which probabilistically depends only on
+the previous sample Si-1 \[**get as s\_(i-1)**\], such that
+S<sub>i</sub> are distributed following a desired distribution \[2\].
+Most MCMC algorithms require an initial burn in time before the Markov
+chain converges to the desired distribution \[1\].
 
 The most relevant MCMC method for Bayesian neural networks is the
 **Metropolis-Hastings** algorithm. This algorithm uses the proposal
@@ -222,7 +218,7 @@ a feed-forward approach.
 <figure>
 <img src = "img/sine-plot.png" width = "500" />
 <figcaption aria-hidden="true">
-<em>Figure 1…</em>
+<em>Figure 2. Plot of ….</em>
 </figcaption>
 </figure>
 
@@ -351,23 +347,47 @@ all the predicted variables.
 
 ### Variational Inference
 
+    model = nn.Sequential(
+    bnn.BayesLinear(prior_mu=0, prior_sigma=2, in_features=7, out_features=1000),
+    nn.Sigmoid(),
+    bnn.BayesLinear(prior_mu=0, prior_sigma=2, in_features=1000, out_features=100),
+    nn.Sigmoid(),
+    bnn.BayesLinear(prior_mu=0, prior_sigma=2, in_features=100, out_features=1),
+    )
+
 ***EXPLANATION***
 
+<figure>
 <img src = "img/variational-data.png" width = "500" />
+<figcaption aria-hidden="true">
+<em>Figure 3. Plot of ….</em>
+</figcaption>
+</figure>
 
 ### MCMC Sampling
 
-For implementing MCMC, we used an algorithm from Chandra et al that used
-Langevin-based MCMC sampling on a Bayesian neural network framework
-\[6\]. For MCMC, the y values were divided by 100 to be within a 0 to 1
-scale for prediction. The y values were rescaled back to the original
-concrete mpa values after predicting the values.
+For MCMC, the y values were divided by 100 to be within a 0 to 1 scale
+for prediction. The y values were rescaled back to the original concrete
+mpa values after predicting the values. For implementing MCMC, we used
+an algorithm from Chandra et al that used Langevin-based MCMC sampling
+on a Bayesian neural network framework \[6\]. This algorith outputs a
+posterior distribution of the model parameters (specifically the weights
+and biases) \[6\].
+
+1.  Draw initial values
+
+2.  
 
 ***EXPLANATION***
 
 ***MENTION THE ALGORITHM USED***
 
+<figure>
 <img src = "img/mcmc-data.png" width = "500" />
+<figcaption aria-hidden="true">
+<em>Figure 4. Plot of ….</em>
+</figcaption>
+</figure>
 
 ## References
 
