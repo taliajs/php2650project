@@ -374,16 +374,37 @@ on a Bayesian neural network framework \[6\]. This algorithm outputs a
 posterior distribution of the model parameters (specifically the weights
 and biases) \[6\].
 
-Initial values are drawan from the
-<img src = "https://render.githubusercontent.com/render/math?math=\theta">
-
 1.  Draw initial values
     <img src = "https://render.githubusercontent.com/render/math?math=\theta_0">
     from the prior
 
-2.  Iterate until the max number of samples are reached:
+2.  Generate proposal distribution for
+    <img src = "https://render.githubusercontent.com/render/math?math=\theta^p">,
+    which incorporates the model weights and
+    <img src = "https://render.githubusercontent.com/render/math?math=\tau^2">
+    from a Langevin gradient or random walk proposal distribution.
 
-***EXPLANATION***
+3.  Evaluate the likelihood of the prior: (equation 23)
+
+4.  Proposal distribution evaluated using BNN model with the following
+    likelihood function:
+
+\<img src = “img/mcmc-likelihood.png”, width = “500”/\>
+
+1.  Use the likelihoods found in steps 3 and 4, check if proposal
+    distribution should be accepted by using Metropolis-Hasting
+    algorithm/equation to compute the posterior probability:
+
+\<img src = “img/log-posterior.png”, width = “500”/\>
+
+1.  If the proposal is accepted, the proposal distribution becomes a
+    part of the MCMC chain. If the proposal is not accepted, keep the
+    current state of the chain.
+
+These steps are repeated until the maximum number of samples are
+reached.
+
+1.  Obtain posterior distribution by combining the samples in the chain.
 
 ***MENTION THE ALGORITHM USED***
 
@@ -393,6 +414,8 @@ Initial values are drawan from the
 <em>Figure 4. Plot of ….</em>
 </figcaption>
 </figure>
+
+***EXPLANATION*** (of plot!!)
 
 ## References
 
