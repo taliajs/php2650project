@@ -116,10 +116,10 @@ First, we will implement a Bayesian neural network using variational inference f
 
 <figure>
 <img src = "img/sine-plot.png" width = "500" />
-<figcaption aria-hidden="true"><em>Figure 2. Results froM Variational Inference Sine function implementation </em></figcaption>
+<figcaption aria-hidden="true"><em>Figure 2. Results from Variational Inference Sine function implementation </em></figcaption>
 </figure> 
 
-When estimating one dimensional data, the variational methods demonstrate a really good prediction accuracy. This model consisted of 2 hidden layers with 1000 neurons and 500 neurons respectively, and was trained for 3000 epochs. Outside of the upper and lower bounds of the x axis, the predicted mean model almost perfectly estimated the actual target function displayed, which was <img src = "img/sine-target-function.png" width = "45">. Also, the 99% confidence interval almost perfectly captured all the randomized values from the test set (Figure 2). 
+When estimating one dimensional data, the variational methods demonstrate a really good prediction accuracy. This model consisted of 2 hidden layers with 1000 neurons and 500 neurons respectively, and was trained for 3000 epochs. Outside of the upper and lower bounds of the x axis, the predicted mean model almost perfectly estimated the actual target function displayed, which was <img src = "img/sine-target-function.png" width = "55">. Also, the 99% confidence interval almost perfectly captured all the randomized values from the test set (Figure 2). 
 
 
 
