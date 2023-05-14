@@ -277,7 +277,8 @@ Bayesian neural networks can be used to learn/estimate a probability distributio
 4. Blundell, et al. Weight Uncertainty in Neural Networks. https://arxiv.org/abs/1505.05424
 
 5. Concrete Dataset: https://www.kaggle.com/datasets/sinamhd9/concrete-comprehensive-strength
-  - Reference: I-Cheng Yeh, "Modeling of strength of high performance concrete using artificial neural networks," Cement and Concrete Research, Vol. 28, No. 12, pp. 1797-1808 (1998).
+  - Reference: I-Cheng Yeh, "Modeling of strength of high performance concrete using
+    artificial neural networks," Cement and Concrete Research, Vol. 28, No. 12, pp.             1797-1808 (1998).
 
 6. Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based tutorial. https://arxiv.org/pdf/2304.02595v1.pdf
 
