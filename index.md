@@ -362,6 +362,8 @@ all the predicted variables.
 
 ### Variational Inference
 
+A Bayesian neural network was fit with 3 layers, with a prior of 2.
+
     model = nn.Sequential(
     bnn.BayesLinear(prior_mu=0, prior_sigma=2, in_features=7, out_features=1000),
     nn.Sigmoid(),
@@ -401,7 +403,7 @@ and biases) \[6\].
 from the prior<br/>
 
 2. Generate proposal distribution for
-<img src = "img/theta-p.png" width = "25"> which incorporates the model
+<img src = "img/theta-p.png" width = "10"> which incorporates the model
 weights and
 <img src = "https://render.githubusercontent.com/render/math?math=\tau^2">
 from a Langevin gradient or random walk proposal distribution.
@@ -488,9 +490,9 @@ it comes to sampling approximation methods like MCMC sampling.
 5.  Concrete Dataset:
     <https://www.kaggle.com/datasets/sinamhd9/concrete-comprehensive-strength>
 
-6.  Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based
-    tutorial. <https://arxiv.org/pdf/2304.02595v1.pdf>
-
 -   Reference: I-Cheng Yeh, “Modeling of strength of high performance
     concrete using artificial neural networks,” Cement and Concrete
     Research, Vol. 28, No. 12, pp. 1797-1808 (1998).
+
+1.  Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based
+    tutorial. <https://arxiv.org/pdf/2304.02595v1.pdf>
