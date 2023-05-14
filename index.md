@@ -35,6 +35,47 @@ when new information is obtained. In the context of a model, leaving
 everything with probability allows the model to take into account future
 information and update it, rather than making a new model.
 
+## Bayesian Inference
+
+The idea behind Bayesian inferences is to treat the parameters of the
+population you want to study as the unknown variable of interest, while
+having the new observation data from the population as known variables
+one would use to learn about said parameters.
+
+Bayesian inference is composed of three separate distributions: the
+prior distribution, the likelihood function derived from a statistical
+model for the observations of the study, and the posterior distribution.
+Suppose we have a prior
+<img src = "https://render.githubusercontent.com/render/math?math=P(\theta)">
+and
+<img src = "https://render.githubusercontent.com/render/math?math=X"> as
+the collection of data points for a study. The
+<img src = "https://render.githubusercontent.com/render/math?math=P(X|\theta)">
+is known as the probability of observing our data
+<img src = "https://render.githubusercontent.com/render/math?math=X">
+given that our prior belief is true, otherwise known as the likelihood.
+
+Using Bayes’ rule, we can derive a posterior distribution through the
+following:
+
+<center>
+<img src = "img/bayes.png" width = "400"/>
+</center>
+
+Since the denominator of this posterior can be seen as a constant,
+people would focus on solving for the numerator, and then approximating
+the denominator through the use of proportionality. From the resulting
+posterior distribution, one can sample multiple possible parameter
+values to predict values from the population one is interested in. This
+can be compared with data that is sampled from the population to see how
+close to the true parameter you are. In this way, this new data would
+refine your prior belief into a new posterior belief, allowing one to
+have a constantly updating model of how the population distribution is
+viewed.
+
+There are many different ways to solve for the posterior distribution,
+but we will not be covering that for this study.
+
 ## Bayesian Neural Networks (BNNs)
 
 Bayesian inference allows us to learn a probability distribution over
