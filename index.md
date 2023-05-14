@@ -66,7 +66,7 @@ parameters
 <img src = "https://render.githubusercontent.com/render/math?math=w"> so
 as to maximize a loss function *L(w)*. A neural network through the
 Bayesian approach aims to estimate the posterior distribution
-<img src = "img/posterior-distribution.png" width = "60"/>,the
+<img src = "img/posterior-distribution.png" width = "65"/>,the
 distribution of the weight parameters given the training data the model
 is fitted with \[1\].
 
@@ -126,7 +126,7 @@ The assumption of sample independence is sacrificed by using a Markov
 Chain to produce a sequence of dependent samples \[3\], with a proposal
 distribution over choices in the next sample in the sequence conditioned
 on the previous choice
-<img src = "img/sample-independence.png" width = "45"/> \[1\].
+<img src = "img/sample-independence.png" width = "55"/> \[1\].
 
 The idea behind MCMC is to construct a Markov Chain (a sequence of
 random samples
@@ -166,7 +166,7 @@ than the MCMC algorithm \[2\]. Variational methods model the posterior
 <img src = "img/approximate-posterior.png" width = "35"/> called the
 **approximate posterior** (which is a “parametrized, tractable-stand in
 distribution” \[1\]) (The parametrized variational distribution over the
-weights <img src = "img/approximate-posterior.png" width = "35" /> is
+weights <img src = "img/approximate-posterior.png" width = "40" /> is
 specified). Then, the parameter
 <img src = "https://render.githubusercontent.com/render/math?math=\phi">
 is tuned so it better approximates the intractable distribution \[1\].
