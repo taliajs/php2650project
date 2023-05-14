@@ -401,7 +401,7 @@ and biases) \[6\].
 from the prior<br/>
 
 2. Generate proposal distribution for
-<img src = "img/theta-p.png" width = "45"> which incorporates the model
+<img src = "img/theta-p.png" width = "25"> which incorporates the model
 weights and
 <img src = "https://render.githubusercontent.com/render/math?math=\tau^2">
 from a Langevin gradient or random walk proposal distribution.

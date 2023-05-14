@@ -210,7 +210,7 @@ For MCMC, the y values were divided by 100 to be within a 0 to 1 scale for predi
 
 <span>1.</span>  Draw initial values <img src = "https://render.githubusercontent.com/render/math?math=\theta_0"> from the prior<br/>
 
-<span>2.</span> Generate proposal distribution for <img src = "img/theta-p.png" width = "45"> which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. 
+<span>2.</span> Generate proposal distribution for <img src = "img/theta-p.png" width = "25"> which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. 
 
 3. Evaluate the likelihood of the prior: 
 
