@@ -532,10 +532,9 @@ it comes to sampling approximation methods like MCMC sampling.
 
 5.  Concrete Dataset:
     <https://www.kaggle.com/datasets/sinamhd9/concrete-comprehensive-strength>
-
--   Reference: I-Cheng Yeh, “Modeling of strength of high performance
+    \[Reference: I-Cheng Yeh, “Modeling of strength of high performance
     concrete using artificial neural networks,” Cement and Concrete
-    Research, Vol. 28, No. 12, pp. 1797-1808 (1998).
+    Research, Vol. 28, No. 12, pp. 1797-1808 (1998)\]
 
-1.  Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based
+6.  Chandra, et al. Bayesian Neural Networks via MCMC: a Python-based
     tutorial. <https://arxiv.org/pdf/2304.02595v1.pdf>
