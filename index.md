@@ -1,15 +1,17 @@
 # Applying Bayesian Inference into Neural Networks
 
-Deep learning is a machine learning technique used for learning neural
-networks, and for processing data in a more “human” way. Deep Learning
-Neural Networks are a powerful tool that can be used to approximate
-solutions to many functions, even if they are not closed form. However,
-a major problem with neural networks is overfitting, which is when the
-learning algorithm does such a good job of tuning the parameters on the
-training set that it performs badly on new data \[1\]. There are many
-methods that can be used to reduce overfitting (like early stopping or
-dropout), but the method we are focusing on is **applying Bayesian
-inference into the neural network**.
+Neural networks is a deep learning technique used for processing data in
+a more “human” way. The structure of a neural network can be likened to
+a human brain, where the interaction between various neurons of
+different layers would be used to learn patterns from inputted data.
+Deep Learning Neural Networks are a powerful tool that can be used to
+approximate solutions to many functions, even if they are not closed
+form. However, a major problem with neural networks is overfitting,
+which is when the learning algorithm does such a good job of tuning the
+parameters on the training set that it performs badly on new data \[1\].
+There are many methods that can be used to reduce overfitting (like
+early stopping or dropout), but the method we are focusing on is
+**applying Bayesian inference onto neural networks.**
 
 ## Bayesian
 
