@@ -237,7 +237,7 @@ hidden layers with 1000 neurons and 500 neurons respectively, and was
 trained for 3000 epochs. Outside of the upper and lower bounds of the x
 axis, the predicted mean model almost perfectly estimated the actual
 target function displayed, which was
-<img src = "img/sine-target-function.png" width = "55">. Also, the 99%
+<img src = "img/sine-target-function.png" width = "65">. Also, the 99%
 confidence interval almost perfectly captured all the randomized values
 from the test set (Figure 2).
 
@@ -401,7 +401,7 @@ and biases) \[6\].
 from the prior<br/>
 
 2. Generate proposal distribution for
-<img src = img/theta-p.png" width = "45"/> which incorporates the model
+<img src = "img/theta-p.png" width = "45"> which incorporates the model
 weights and
 <img src = "https://render.githubusercontent.com/render/math?math=\tau^2">
 from a Langevin gradient or random walk proposal distribution.
@@ -437,10 +437,9 @@ from a Langevin gradient or random walk proposal distribution.
     part of the MCMC chain. If the proposal is not accepted, keep the
     current state of the chain.
 
-These steps are repeated until the maximum number of samples are
-reached.
-
-1.  Obtain posterior distribution by combining the samples in the chain.
+5.  These steps are repeated until the maximum number of samples are
+    reached. Then, the posterior distribution is obtained by combining
+    the samples in the chain.
 
 <figure>
 <img src = "img/mcmc-data2.png" width = "500" />

@@ -119,7 +119,7 @@ First, we will implement a Bayesian neural network using variational inference f
 <figcaption aria-hidden="true"><em>Figure 2. Results from Variational Inference Sine function implementation </em></figcaption>
 </figure> 
 
-When estimating one dimensional data, the variational methods demonstrate a really good prediction accuracy. This model consisted of 2 hidden layers with 1000 neurons and 500 neurons respectively, and was trained for 3000 epochs. Outside of the upper and lower bounds of the x axis, the predicted mean model almost perfectly estimated the actual target function displayed, which was <img src = "img/sine-target-function.png" width = "55">. Also, the 99% confidence interval almost perfectly captured all the randomized values from the test set (Figure 2). 
+When estimating one dimensional data, the variational methods demonstrate a really good prediction accuracy. This model consisted of 2 hidden layers with 1000 neurons and 500 neurons respectively, and was trained for 3000 epochs. Outside of the upper and lower bounds of the x axis, the predicted mean model almost perfectly estimated the actual target function displayed, which was <img src = "img/sine-target-function.png" width = "65">. Also, the 99% confidence interval almost perfectly captured all the randomized values from the test set (Figure 2). 
 
 
 
@@ -210,7 +210,7 @@ For MCMC, the y values were divided by 100 to be within a 0 to 1 scale for predi
 
 <span>1.</span>  Draw initial values <img src = "https://render.githubusercontent.com/render/math?math=\theta_0"> from the prior<br/>
 
-<span>2.</span> Generate proposal distribution for <img src = img/theta-p.png" width = "45"/>  which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. 
+<span>2.</span> Generate proposal distribution for <img src = "img/theta-p.png" width = "45"> which incorporates the model weights and <img src = "https://render.githubusercontent.com/render/math?math=\tau^2"> from a Langevin gradient or random walk proposal distribution. 
 
 3. Evaluate the likelihood of the prior: 
 
@@ -232,9 +232,7 @@ For MCMC, the y values were divided by 100 to be within a 0 to 1 scale for predi
 
 6. If the proposal is accepted, the proposal distribution becomes a part of the MCMC chain. If the proposal is not accepted, keep the current state of the chain. 
 
-These steps are repeated until the maximum number of samples are reached.
-
-7. Obtain posterior distribution by combining the samples in the chain. 
+7. These steps are repeated until the maximum number of samples are reached. Then, the posterior distribution is obtained by combining the samples in the chain. 
 
 
 <figure>
